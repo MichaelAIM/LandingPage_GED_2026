@@ -92,32 +92,36 @@
 
 <script setup lang="ts">
 import { ArrowRight, Linkedin, Twitter } from "lucide-vue-next";
+import Bruce from "../assets/Bruce.png";
+import Stuart from "../assets/Stuart.png";
+import Sigfredo from "../assets/Sigfredo.png";
+import Pablo from "../assets/Pablo.png";
 
 const speakers = [
   {
     name: "Bruce M. Link, Doctor",
     role: "Director Científico FILMSS 2",
     institution: "Cultivos espaciales y agricultura espacial NASA",
-    image: "../assets/Bruce.png",
+    image: Bruce,
   },
   {
     name: "Stuart J. Donald, BSc.",
     role: "Vicepresidente Ejecutivo - Director Global de Agricultura.",
     institution: "Grupo Al Dahra.",
-    image: "../assets/Stuart.png",
+    image: Stuart,
   },
   {
     name: "Sigfredo Fuentes, PhD.",
     role: "Profesor de Agricultura Digital y Ciencias de la Alimentación. ",
     institution:
       "Centro de Excelencia en Plantas para el Espacio del Consejo Australiano de Investigación - Universidad de Melbourne.",
-    image: "../assets/Sigfredo.png",
+    image: Sigfredo,
   },
   {
     name: "Pablo Zamora, PhD.",
     role: "Co-founder Not-Co. - Presidente Fundación Chile.",
     institution: "Consejero Banco Estado, Emprendedor Serial.",
-    image: "../assets/Pablo.png",
+    image: Pablo,
   },
 ];
 </script>

@@ -26,61 +26,73 @@
 </template>
 
 <script setup lang="ts">
+import Waki from "../assets/waki.png";
+import CORFO from "../assets/CORFO.png";
+import GORE from "../assets/GORE.png";
+import codesser from "../assets/codesser.jpg";
+import NASA from "../assets/NASA.png";
+import IP from "../assets/logo-IP-Santo-tomas.webp";
+import UNAP from "../assets/UNAP.png";
+import mikrolab from "../assets/mikrolab.webp";
+import ancestral from "../assets/ancestral.png";
+import arid from "../assets/Arid.png";
+import consorcio from "../assets/consorcio.png";
+
 const sponsors = [
   {
     name: "WakiLabs",
     color: "text-[#FF6B00]",
-    img: "../assets/waki.png",
+    img: Waki,
   },
   {
     name: "Consorcio del Desierto",
     color: "text-[#FFC857]",
-    img: "../assets/CONSORCIO.png",
+    img: consorcio,
   },
   {
     name: "CORFO",
     color: "text-[#00F5D4]",
-    img: "../assets/CORFO.png",
+    img: CORFO,
   },
   {
     name: "Gobierno Regional de Arica y Parinacota",
     color: "text-[#3B82F6]",
-    img: "../assets/GORE.png",
+    img: GORE,
   },
   {
     name: "codesser",
     color: "text-[#3B82F6]",
-    img: "../assets/codesser.jpg",
+    img: codesser,
   },
   {
     name: "NASA",
     color: "text-white",
-    img: "../assets/NASA.png",
+    img: NASA,
   },
   {
     name: "IP CFT Santo Tomás",
     color: "text-[#8B5CF6]",
-    img: "../assets/logo-IP-Santo-tomas.webp",
+    img: IP,
   },
   {
     name: "UNAP",
     color: "text-[#10B981]",
-    img: "../assets/UNAP.png",
+    img: UNAP,
   },
   {
     name: "mikrolab",
     color: "text-[#EF4444]",
-    img: "../assets/mikrolab.webp",
+    img: mikrolab,
   },
   {
     name: "Ancestral Technologies",
     color: "text-[#EF4444]",
-    img: "../assets/ancestral.png",
+    img: ancestral,
   },
   {
     name: "Arid",
     color: "text-[#EF4444]",
-    img: "../assets/Arid.png",
+    img: arid,
   },
 ];
 </script>
