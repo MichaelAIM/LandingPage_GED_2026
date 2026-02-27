@@ -30,57 +30,57 @@ const sponsors = [
   {
     name: "WakiLabs",
     color: "text-[#FF6B00]",
-    img: "/src/assets/waki.png",
+    img: "../assets/waki.png",
   },
   {
     name: "Consorcio del Desierto",
     color: "text-[#FFC857]",
-    img: "/src/assets/CONSORCIO.png",
+    img: "../assets/CONSORCIO.png",
   },
   {
     name: "CORFO",
     color: "text-[#00F5D4]",
-    img: "/src/assets/CORFO.png",
+    img: "../assets/CORFO.png",
   },
   {
     name: "Gobierno Regional de Arica y Parinacota",
     color: "text-[#3B82F6]",
-    img: "/src/assets/GORE.png",
+    img: "../assets/GORE.png",
   },
   {
     name: "codesser",
     color: "text-[#3B82F6]",
-    img: "/src/assets/codesser.jpg",
+    img: "../assets/codesser.jpg",
   },
   {
     name: "NASA",
     color: "text-white",
-    img: "/src/assets/NASA.png",
+    img: "../assets/NASA.png",
   },
   {
     name: "IP CFT Santo Tomás",
     color: "text-[#8B5CF6]",
-    img: "/src/assets/logo-IP-Santo-tomas.webp",
+    img: "../assets/logo-IP-Santo-tomas.webp",
   },
   {
     name: "UNAP",
     color: "text-[#10B981]",
-    img: "/src/assets/UNAP.png",
+    img: "../assets/UNAP.png",
   },
   {
     name: "mikrolab",
     color: "text-[#EF4444]",
-    img: "/src/assets/mikrolab.webp",
+    img: "../assets/mikrolab.webp",
   },
   {
     name: "Ancestral Technologies",
     color: "text-[#EF4444]",
-    img: "/src/assets/ancestral.png",
+    img: "../assets/ancestral.png",
   },
   {
     name: "Arid",
     color: "text-[#EF4444]",
-    img: "/src/assets/Arid.png",
+    img: "../assets/Arid.png",
   },
 ];
 </script>

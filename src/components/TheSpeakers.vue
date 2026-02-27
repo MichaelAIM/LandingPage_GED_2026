@@ -98,26 +98,26 @@ const speakers = [
     name: "Bruce M. Link, Doctor",
     role: "Director Científico FILMSS 2",
     institution: "Cultivos espaciales y agricultura espacial NASA",
-    image: "/src/assets/Bruce.png",
+    image: "../assets/Bruce.png",
   },
   {
     name: "Stuart J. Donald, BSc.",
     role: "Vicepresidente Ejecutivo - Director Global de Agricultura.",
     institution: "Grupo Al Dahra.",
-    image: "/src/assets/Stuart.png",
+    image: "../assets/Stuart.png",
   },
   {
     name: "Sigfredo Fuentes, PhD.",
     role: "Profesor de Agricultura Digital y Ciencias de la Alimentación. ",
     institution:
       "Centro de Excelencia en Plantas para el Espacio del Consejo Australiano de Investigación - Universidad de Melbourne.",
-    image: "/src/assets/Sigfredo.png",
+    image: "../assets/Sigfredo.png",
   },
   {
     name: "Pablo Zamora, PhD.",
     role: "Co-founder Not-Co. - Presidente Fundación Chile.",
     institution: "Consejero Banco Estado, Emprendedor Serial.",
-    image: "/src/assets/Pablo.png",
+    image: "../assets/Pablo.png",
   },
 ];
 </script>

@@ -254,7 +254,9 @@ import CountdownTimer from "./CountdownTimer.vue";
 
 // --- Imágenes por modo ---
 // Agrega o cambia las URLs aquí según tus necesidades
-const nightImages = ["src/assets/tutelares.jpg", "src/assets/central.webp"];
+import tutelares from "../assets/tutelares.jpg";
+import central from "../assets/central.webp";
+const nightImages = [tutelares, central];
 
 const dayImages = [
   "https://images.unsplash.com/photo-1623097048793-d37273f167a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBdGFjYW1hJTIwZGVzZXJ0JTIwc3VubnklMjBkdW5lc3xlbnwxfHx8fDE3NzE1NDM5Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
