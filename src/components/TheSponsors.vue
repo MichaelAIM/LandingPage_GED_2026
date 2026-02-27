@@ -36,7 +36,7 @@ import UNAP from "../assets/UNAP.png";
 import mikrolab from "../assets/mikrolab.webp";
 import ancestral from "../assets/ancestral.png";
 import arid from "../assets/Arid.png";
-import consorcio from "../assets/consorcio.png";
+import consorcio from "../assets/CONSORCIO.png";
 
 const sponsors = [
   {
