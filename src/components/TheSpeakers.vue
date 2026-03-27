@@ -15,17 +15,16 @@
           <h2
             class="font-orbitron text-4xl md:text-5xl font-bold text-white mb-2"
           >
-            VISIONARIOS <span class="text-[#FF6B00]">DEL DESIERTO</span>
+            VOCES DEL <span class="text-[#FF6B00]">DESIERTO</span>
           </h2>
           <p class="font-inter text-[#E6EAF0]/60 max-w-xl">
-            Conoce a las mentes brillantes que están redefiniendo lo posible en
-            entornos extremos.
+            Los líderes que están reescribiendo las reglas de lo posible en logística, negocios, tecnología y agricultura extrema.
           </p>
         </div>
         <button
           class="flex items-center gap-2 text-[#00F5D4] font-orbitron text-sm uppercase tracking-widest hover:underline decoration-[#00F5D4] underline-offset-4 transition-all"
         >
-          Ver todos los speakers <ArrowRight :size="16" />
+          Ver todas las voces <ArrowRight :size="16" />
         </button>
       </div>
 

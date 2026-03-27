@@ -7,11 +7,14 @@
         :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
         class="text-center mb-16"
       >
-        <h2 class="font-orbitron text-4xl font-bold text-white mb-4">
-          GALERÍA <span class="text-[#00F5D4]">VISUAL</span>
+        <span class="inline-block py-1 px-4 rounded-full bg-[#00F5D4]/10 border border-[#00F5D4]/20 text-[#00F5D4] font-orbitron font-bold text-[10px] tracking-widest uppercase mb-4">
+          Versiones Anteriores
+        </span>
+        <h2 class="font-orbitron text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+          1º GRAN ENCUENTRO <br class="md:hidden"/> <span class="text-[#00F5D4]">DEL DESIERTO</span>
         </h2>
-        <p class="font-inter text-[#E6EAF0]/60 max-w-xl mx-auto">
-          Un vistazo a la confluencia de naturaleza y tecnología.
+        <p class="font-inter text-[#E6EAF0]/80 max-w-xl mx-auto text-base">
+          Estación Experimental de Canchones, UNAP, Tarapacá. Agosto 2024.
         </p>
       </div>
 

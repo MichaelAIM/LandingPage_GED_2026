@@ -4,7 +4,7 @@
       <h3
         class="font-orbitron text-sm uppercase tracking-widest text-black/80 mb-12"
       >
-        Organiza & Patrocina
+        Aliados del Ecosistema
       </h3>
       <div
         class="flex flex-wrap justify-center items-center gap-12 md-gap-24 transition-opacity duration-500"
@@ -12,7 +12,7 @@
         <div
           v-for="(sponsor, index) in sponsors"
           :key="index"
-          class="group cursor-pointer grayscale-0 hover:grayscale transition-all duration-300 hover:scale-110"
+          class="group cursor-pointer grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-110"
         >
           <img
             :src="sponsor.img"

@@ -1,228 +1,210 @@
 <template>
-  <section
-    id="agenda"
-    class="py-24 bg-[#fff] relative overflow-hidden min-h-screen"
-  >
-    <!-- Background Gradients -->
-    <div
-      class="absolute inset-0 bg-gradient-to-br from-[#EC4899]/5 to-transparent pointer-events-none transition-opacity duration-1000"
-      :style="{ opacity: activeTab === 'arica' ? 1 : 0 }"
-    />
-    <div
-      class="absolute inset-0 bg-gradient-to-bl from-[#A855F7]/5 to-transparent pointer-events-none transition-opacity duration-1000"
-      :style="{ opacity: activeTab === 'iquique' ? 1 : 0 }"
-    />
-
-    <div class="max-w-5xl mx-auto px-6 relative z-10">
-      <!-- Header & Tabs -->
-      <div class="text-center mb-16">
-        <div
-          v-motion
-          :initial="{ opacity: 0, y: -20 }"
-          :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-          class="flex justify-center mb-8"
-        >
+  <div class="bg-[#fff] relative overflow-hidden">
+    <!-- ==================== AGENDA ARICA ==================== -->
+    <section id="agenda-arica" class="py-24 relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B00]/5 to-transparent pointer-events-none" />
+      
+      <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <!-- Header Arica -->
+        <div class="text-center mb-20">
           <div
-            class="p-1 rounded-full bg-black/5 border border-black/10 flex relative"
+            v-motion
+            :initial="{ opacity: 0, y: -20 }"
+            :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
+            class="mb-4"
           >
-            <!-- Sliding indicator -->
-            <div
-              class="absolute top-1 bottom-1 rounded-full bg-[#121A2F] transition-all duration-500"
-              :style="{
-                left: activeTab === 'arica' ? '4px' : '50%',
-                width: 'calc(50% - 4px)',
-              }"
-            />
-            <button
-              @click="activeTab = 'arica'"
-              class="relative z-10 px-8 py-3 rounded-full font-orbitron font-bold text-sm tracking-widest transition-colors duration-300"
-              :class="
-                activeTab === 'arica'
-                  ? 'text-[#EC4899]'
-                  : 'text-black/60 hover:text-[#EC4899]'
-              "
-            >
-              ARICA
-            </button>
-            <button
-              @click="activeTab = 'iquique'"
-              class="relative z-10 px-8 py-3 rounded-full font-orbitron font-bold text-sm tracking-widest transition-colors duration-300"
-              :class="
-                activeTab === 'iquique'
-                  ? 'text-[#A855F7]'
-                  : 'text-black/60 hover:text-[#A855F7]'
-              "
-            >
-              IQUIQUE
-            </button>
+            <span class="inline-block py-1 px-4 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/20 text-[#FF6B00] font-orbitron font-bold text-sm tracking-widest uppercase mb-4">
+              Día 1 / Sede Central
+            </span>
+            <h2 class="font-orbitron text-4xl md:text-5xl font-bold text-black/80">
+              AGENDA <span class="text-[#FF6B00]">ARICA</span>
+            </h2>
+          </div>
+          <div class="flex justify-center gap-6 text-black/60 font-mono text-sm">
+            <span class="flex items-center gap-2"><Calendar :size="14" /> JUN 12, 2026</span>
+            <span class="flex items-center gap-2"><MapPin :size="14" /> Central de Ferrocarriles</span>
           </div>
         </div>
 
-        <h2
-          class="font-orbitron text-4xl md:text-5xl font-bold text-black/80 mb-4"
-        >
-          AGENDA
-          <span
-            class="text-transparent bg-clip-text"
-            :style="{
-              backgroundImage:
-                'linear-gradient(to right, ' + themeColor + ', #F59E0B)',
-            }"
-          >
-            {{ location }}
-          </span>
-        </h2>
-
-        <div class="flex justify-center gap-6 text-black/80 font-mono text-sm">
-          <span class="flex items-center gap-2"
-            ><Calendar :size="14" /> {{ date }}</span
-          >
-          <span class="flex items-center gap-2"
-            ><MapPin :size="14" /> {{ venue }}</span
-          >
-        </div>
-      </div>
-
-      <!-- Timeline -->
-      <div class="relative">
-        <div
-          class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-black/60 to-transparent md:-translate-x-1/2"
-        />
-
-        <Transition name="agenda-fade" mode="out-in">
-          <div :key="activeTab" class="space-y-8">
+        <!-- Timeline Arica -->
+        <div class="relative">
+          <div class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#FF6B00]/40 to-transparent md:-translate-x-1/2" />
+          
+          <div class="space-y-8">
             <div
-              v-for="(item, index) in currentAgenda"
-              :key="index"
+              v-for="(item, index) in aricaAgenda"
+              :key="'arica-' + index"
               v-motion
               :initial="{ opacity: 0, scale: 0.9 }"
-              :visibleOnce="{
-                opacity: 1,
-                scale: 1,
-                transition: { duration: 400, delay: index * 100 },
-              }"
+              :visibleOnce="{ opacity: 1, scale: 1, transition: { duration: 400, delay: index * 100 } }"
               class="flex flex-col md:flex-row gap-8 items-start md:items-center relative"
               :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''"
             >
               <!-- Content Card -->
               <div class="flex-1 w-full pl-16 md:pl-0">
                 <div
-                  class="group relative p-6 bg-[#121A2F]/60 backdrop-blur-md rounded-xl border border-black/5 hover:border-black/20 transition-all duration-300 hover:scale-[1.02]"
+                  class="group relative p-6 bg-[#121A2F]/5 backdrop-blur-md rounded-xl border border-black/5 hover:border-[#FF6B00]/30 transition-all duration-300 hover:bg-white hover:shadow-xl"
                   :class="index % 2 === 0 ? 'md:text-left' : 'md:text-right'"
                 >
                   <div
-                    class="absolute top-0 w-1 h-full opacity-50 rounded-l"
-                    :class="
-                      index % 2 === 0
-                        ? 'left-0 md:left-auto md:right-0'
-                        : 'left-0'
-                    "
-                    :style="{
-                      background:
-                        'linear-gradient(to bottom, transparent, ' +
-                        getCategoryColor(item.type) +
-                        ', transparent)',
-                    }"
-                  />
-                  <div
                     class="flex items-center gap-2 mb-2"
-                    :class="
-                      index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
-                    "
+                    :class="index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'"
                   >
                     <span
                       class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border"
-                      :style="{
-                        color: getCategoryColor(item.type),
-                        borderColor: getCategoryColor(item.type) + '40',
-                        backgroundColor: getCategoryColor(item.type) + '10',
-                      }"
+                      :style="{ color: getCategoryColor(item.type), borderColor: getCategoryColor(item.type) + '40', backgroundColor: getCategoryColor(item.type) + '10' }"
                     >
                       {{ getCategoryLabel(item.type) }}
                     </span>
                   </div>
-                  <h3
-                    class="font-orbitron text-xl font-bold text-white/80 mb-2"
-                  >
+                  <h3 class="font-orbitron text-xl font-bold text-black/80 mb-2 group-hover:text-[#FF6B00] transition-colors">
                     {{ item.title }}
                   </h3>
-                  <p class="font-inter text-sm text-[#E6EAF0]/60">
+                  <p class="font-inter text-sm text-black/60">
                     {{ item.desc }}
                   </p>
                 </div>
               </div>
 
               <!-- Center Dot -->
-              <div
-                class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-4 h-4 rounded-full bg-[#0B0F1A] border-2 border-black/20 z-10 shadow-[0_0_10px_rgba(0,0,0,1)]"
-              >
-                <div
-                  class="w-1.5 h-1.5 rounded-full"
-                  :style="{ backgroundColor: themeColor }"
-                />
+              <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-4 h-4 rounded-full bg-white border-2 border-[#FF6B00]/30 z-10 shadow-[0_0_10px_rgba(255,107,0,0.2)]">
+                <div class="w-1.5 h-1.5 rounded-full bg-[#FF6B00]" />
               </div>
 
-              <!-- Time Label Desktop -->
-              <div
-                class="flex-1 hidden md:block"
-                :class="
-                  index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'
-                "
-              >
-                <span class="font-mono text-2xl font-bold text-black/60">{{
-                  item.time
-                }}</span>
+              <!-- Time -->
+              <div class="flex-1 hidden md:block" :class="index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'">
+                <span class="font-mono text-2xl font-bold text-[#FF6B00]/80">{{ item.time }}</span>
               </div>
-
-              <!-- Time Label Mobile -->
               <div class="absolute left-14 -top-1 md:hidden">
-                <span class="font-mono text-sm font-bold text-black/60">{{
-                  item.time
-                }}</span>
+                <span class="font-mono text-sm font-bold text-[#FF6B00]/80">{{ item.time }}</span>
               </div>
             </div>
           </div>
-        </Transition>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Divider between Agendas -->
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-black/10 to-transparent my-12" />
+
+    <!-- ==================== AGENDA IQUIQUE ==================== -->
+    <section id="agenda-iquique" class="py-24 relative">
+      <div class="absolute inset-0 bg-gradient-to-tl from-[#00F5D4]/5 to-transparent pointer-events-none" />
+      
+      <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <!-- Header Iquique -->
+        <div class="text-center mb-20">
+          <div
+            v-motion
+            :initial="{ opacity: 0, y: -20 }"
+            :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
+            class="mb-4"
+          >
+            <span class="inline-block py-1 px-4 rounded-full bg-[#00F5D4]/10 border border-[#00F5D4]/30 text-[#00F5D4] font-orbitron font-bold text-sm tracking-widest uppercase mb-4">
+              Día 2 / Expansión
+            </span>
+            <h2 class="font-orbitron text-4xl md:text-5xl font-bold text-black/80">
+              AGENDA <span class="text-[#00F5D4]">IQUIQUE</span>
+            </h2>
+          </div>
+          <div class="flex justify-center gap-6 text-black/60 font-mono text-sm">
+            <span class="flex items-center gap-2"><Calendar :size="14" /> JUN 16, 2026</span>
+            <span class="flex items-center gap-2"><MapPin :size="14" /> Playa Brava</span>
+          </div>
+        </div>
+
+        <!-- Timeline Iquique -->
+        <div class="relative">
+          <div class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#00F5D4]/40 to-transparent md:-translate-x-1/2" />
+          
+          <div class="space-y-8">
+            <div
+              v-for="(item, index) in iquiqueAgenda"
+              :key="'iquique-' + index"
+              v-motion
+              :initial="{ opacity: 0, scale: 0.9 }"
+              :visibleOnce="{ opacity: 1, scale: 1, transition: { duration: 400, delay: index * 100 } }"
+              class="flex flex-col md:flex-row gap-8 items-start md:items-center relative"
+              :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''"
+            >
+              <!-- Content Card -->
+              <div class="flex-1 w-full pl-16 md:pl-0">
+                <div
+                  class="group relative p-6 bg-[#121A2F]/5 backdrop-blur-md rounded-xl border border-black/5 hover:border-[#00F5D4]/50 transition-all duration-300 hover:bg-white hover:shadow-xl"
+                  :class="index % 2 === 0 ? 'md:text-left' : 'md:text-right'"
+                >
+                  <div
+                    class="flex items-center gap-2 mb-2"
+                    :class="index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'"
+                  >
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border"
+                      :style="{ color: getCategoryColor(item.type), borderColor: getCategoryColor(item.type) + '40', backgroundColor: getCategoryColor(item.type) + '10' }"
+                    >
+                      {{ getCategoryLabel(item.type) }}
+                    </span>
+                  </div>
+                  <h3 class="font-orbitron text-xl font-bold text-black/80 mb-2 group-hover:text-[#00F5D4] transition-colors">
+                    {{ item.title }}
+                  </h3>
+                  <p class="font-inter text-sm text-black/60">
+                    {{ item.desc }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Center Dot -->
+              <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-4 h-4 rounded-full bg-white border-2 border-[#00F5D4]/40 z-10 shadow-[0_0_10px_rgba(0,245,212,0.2)]">
+                <div class="w-1.5 h-1.5 rounded-full bg-[#00F5D4]" />
+              </div>
+
+              <!-- Time -->
+              <div class="flex-1 hidden md:block" :class="index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'">
+                <span class="font-mono text-2xl font-bold text-[#00F5D4]">{{ item.time }}</span>
+              </div>
+              <div class="absolute left-14 -top-1 md:hidden">
+                <span class="font-mono text-sm font-bold text-[#00F5D4]">{{ item.time }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
 import { Calendar, MapPin } from "lucide-vue-next";
 
-const activeTab = ref<"arica" | "iquique">("arica");
-
 const categories: Record<string, { color: string; label: string }> = {
-  agro: { color: "#A3E635", label: "AGRO-LIFE" },
-  water: { color: "#06B6D4", label: "HYDRO-TECH" },
-  solar: { color: "#F97316", label: "SOLAR-PUNK" },
-  terra: { color: "#EF4444", label: "TERRA-FORM" },
-  social: { color: "#E6EAF0", label: "COMMUNITY" },
+  agro: { color: "#34D399", label: "AGRO-LIFE" },
+  logistics: { color: "#3B82F6", label: "LOGISTICS" },
+  business: { color: "#F59E0B", label: "BUSINESS" },
+  tech: { color: "#00F5D4", label: "TECH/DEFENSE" },
+  social: { color: "#6B7280", label: "NETWORKING" },
 };
 
-const getCategoryColor = (type: string) => categories[type]?.color ?? "#fff";
+const getCategoryColor = (type: string) => categories[type]?.color ?? "#000";
 const getCategoryLabel = (type: string) => categories[type]?.label ?? type;
 
 const aricaAgenda = [
   {
     time: "08:30",
-    title: "Registro Sede Central",
-    desc: "Acreditación y entrega de kit táctico.",
+    title: "Registro Arica",
+    desc: "Acreditación y acceso ecosistema.",
     type: "social",
   },
   {
     time: "09:30",
-    title: "Keynote: Desierto Vivo",
-    desc: "Inauguración oficial con autoridades regionales.",
+    title: "Keynote: Bio-Resiliencia",
+    desc: "Inauguración oficial con foco en agrotecnología.",
     type: "agro",
   },
   {
     time: "11:00",
-    title: "Panel: Agricultura Salina",
-    desc: "Adaptación de cultivos a suelos con alta salinidad.",
-    type: "water",
+    title: "Panel: Negocios Fronterizos",
+    desc: "Oportunidades de inversión en la puerta norte.",
+    type: "business",
   },
   {
     time: "13:00",
@@ -233,74 +215,41 @@ const aricaAgenda = [
   {
     time: "15:00",
     title: "Tech-Showcase: Arica",
-    desc: "Demostración de startups locales.",
-    type: "solar",
+    desc: "Demostración de startups Biotec y Patrimonio.",
+    type: "tech",
   },
 ];
 
 const iquiqueAgenda = [
   {
     time: "09:00",
-    title: "Registro Expansión",
-    desc: "Check-in digital y networking inicial.",
+    title: "Registro Iquique",
+    desc: "Check-in logístico y B2B Area.",
     type: "social",
   },
   {
     time: "10:30",
-    title: "Keynote: Energía Infinita",
-    desc: "El potencial solar del norte grande.",
-    type: "solar",
+    title: "Keynote: Hub Global",
+    desc: "El rol logístico del extremo norte conectando Asia.",
+    type: "logistics",
   },
   {
     time: "12:00",
-    title: "Workshop: Terraforming",
-    desc: "Simulación de condiciones extremas.",
-    type: "terra",
+    title: "Workshop: Macrozona Franca",
+    desc: "Innovación en modelos de negocio ZOFRI.",
+    type: "business",
   },
   {
     time: "13:30",
     title: "Almuerzo Corporativo",
-    desc: "Espacio de conexión con inversores.",
+    desc: "Espacio de conexión con inversores y defensa.",
     type: "social",
   },
   {
     time: "15:30",
-    title: "Panel: Agua del Aire",
-    desc: "Tecnologías de atrapanieblas 2.0.",
-    type: "water",
+    title: "Panel: Exploración Extrema",
+    desc: "Robótica y adaptación de la fuerza de trabajo.",
+    type: "tech",
   },
 ];
-
-const currentAgenda = computed(() =>
-  activeTab.value === "arica" ? aricaAgenda : iquiqueAgenda,
-);
-const themeColor = computed(() =>
-  activeTab.value === "arica" ? "#EC4899" : "#A855F7",
-);
-const location = computed(() =>
-  activeTab.value === "arica" ? "ARICA" : "IQUIQUE",
-);
-const date = computed(() =>
-  activeTab.value === "arica" ? "JUN 12, 2026" : "JUN 16, 2026",
-);
-const venue = computed(() =>
-  activeTab.value === "arica" ? "Central de Ferrocarriles" : "Playa Brava",
-);
 </script>
-
-<style scoped>
-.agenda-fade-enter-active,
-.agenda-fade-leave-active {
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-.agenda-fade-enter-from {
-  opacity: 0;
-  transform: translateY(20px);
-}
-.agenda-fade-leave-to {
-  opacity: 0;
-  transform: translateY(-20px);
-}
-</style>

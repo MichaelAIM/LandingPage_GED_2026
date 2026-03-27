@@ -26,10 +26,11 @@
 </template>
 
 <script setup lang="ts">
-import { Home, Calendar, Users, Image, Ticket } from 'lucide-vue-next'
+import { Home, Map, Calendar, Users, Image, Ticket } from 'lucide-vue-next'
 
 const navItems = [
   { icon: Home, label: 'Inicio', href: '#hero' },
+  { icon: Map, label: 'Territorio', href: '#territory' },
   { icon: Users, label: 'Speakers', href: '#speakers' },
   { icon: Calendar, label: 'Agenda', href: '#agenda' },
   { icon: Image, label: 'Galería', href: '#gallery' },
