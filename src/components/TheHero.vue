@@ -1,43 +1,25 @@
 <template>
-  <div
-    id="hero"
-    class="relative min-h-screen w-full overflow-hidden font-sans flex flex-col justify-center py-20"
-  >
+  <div id="hero" class="relative min-h-screen w-full overflow-hidden font-sans flex flex-col justify-center py-20">
     <!-- Background with transition -->
     <Transition name="bg-fade" mode="out-in">
-      <div
-        :key="currentBg"
-        class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
-        :style="bgStyle"
-      >
-        <div
-          :class="[
-            'absolute inset-0',
-            isNight ? 'bg-black/40' : 'bg-[#0B0F1A]/50',
-          ]"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F1A]"
-        />
+      <div :key="currentBg" class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed" :style="bgStyle">
+        <div :class="[
+          'absolute inset-0',
+          isNight ? 'bg-black/40' : 'bg-[#0B0F1A]/50',
+        ]" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#0B0F1A]" />
       </div>
     </Transition>
 
     <!-- Day/Night Toggle -->
     <div class="absolute top-8 right-8 z-50 flex items-center gap-4">
-      <span
-        class="text-xs uppercase tracking-widest text-[#E6EAF0]/70 font-orbitron"
-      >
+      <span class="text-xs uppercase tracking-widest text-[#E6EAF0]/70 font-orbitron">
         {{ isNight ? "Modo Nocturno" : "Modo Solar" }}
       </span>
-      <button
-        @click="handleManualToggle"
-        class="relative flex h-8 w-14 items-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-1 shadow-lg transition-all hover:bg-white/20"
-      >
-        <div
-          class="flex h-6 w-6 items-center justify-center rounded-full shadow-md transition-all duration-300"
-          :class="isNight ? 'bg-[#0B0F1A]' : 'bg-[#FFC857]'"
-          :style="toggleStyle"
-        >
+      <button @click="handleManualToggle"
+        class="relative flex h-8 w-14 items-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-1 shadow-lg transition-all hover:bg-white/20">
+        <div class="flex h-6 w-6 items-center justify-center rounded-full shadow-md transition-all duration-300"
+          :class="isNight ? 'bg-[#0B0F1A]' : 'bg-[#FFC857]'" :style="toggleStyle">
           <Moon v-if="isNight" :size="14" class="text-[#00F5D4]" />
           <Sun v-else :size="14" class="text-[#FF6B00]" />
         </div>
@@ -45,80 +27,60 @@
     </div>
 
     <!-- Content -->
-    <div
-      class="relative z-20 flex h-full flex-col items-center justify-center px-6 text-center"
-    >
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 30 }"
-        :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 200 } }"
-        class="mb-8 max-w-4xl"
-      >
-        <span class="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-[#00F5D4] font-mono text-xs uppercase tracking-widest mb-6">
+    <div class="relative z-20 flex h-full flex-col items-center justify-center px-6 text-center">
+      <div v-motion :initial="{ opacity: 0, y: 30 }"
+        :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 200 } }" class="mb-8 max-w-4xl">
+        <span
+          class="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-[#00F5D4] font-mono text-xs uppercase tracking-widest mb-6">
           EL EPICENTRO DE LA INNOVACIÓN EXTREMA
         </span>
-        
-        <img
-          src="../assets/LOGO_GED-BLANCO-2048x955.png"
-          alt="Gran Encuentro del Desierto"
+
+        <img src="../assets/LOGO_GED-BLANCO-2048x955.png" alt="Gran Encuentro del Desierto"
           class="w-full max-w-lg mx-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.2)] mb-8"
-          @error="(e) => ((e.target as HTMLImageElement).style.display = 'none')"
-        />
-        
+          @error="(e) => ((e.target as HTMLImageElement).style.display = 'none')" />
+
         <h1 class="font-orbitron text-3xl md:text-5xl font-black text-white tracking-tight leading-tight mb-6">
-          El Gran Encuentro del Desierto II
+          innovación, negocios y futuro
         </h1>
-        
-        <p class="font-inter text-lg md:text-xl text-[#E6EAF0]/80 max-w-2xl mx-auto leading-relaxed">
-          Descubre cómo el territorio más árido del mundo está impulsando el futuro tecnológico, logístico y sostenible. Dos ciudades, infinitas posibilidades.
+
+        <p class="font-inter text-lg md:text-xl text-[#FF6B00] font-bold max-w-2xl mx-auto leading-relaxed mb-4">
+          Descubre cómo el desierto está impulsando el futuro tecnológico, logístico y sostenible.
+        </p>
+
+        <p class="font-inter text-md md:text-lg text-[#E6EAF0]/80 max-w-2xl mx-auto leading-relaxed">
+          Arica e Iquique se reúnen en una experiencia única, con más días de actividades, grandes referentes
+          internacionales y una agenda diseñada para conectar territorio, ciencia e industria.
         </p>
       </div>
 
       <!-- CTA Buttons -->
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 20 }"
+      <div v-motion :initial="{ opacity: 0, y: 20 }"
         :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 400 } }"
-        class="flex flex-col md:flex-row gap-6 mt-8"
-      >
-        <a
-          href="#agenda"
-          class="group relative px-8 py-4 bg-[#FF6B00] text-white font-orbitron font-bold tracking-wider uppercase overflow-hidden rounded-sm"
-        >
-          <span class="relative z-10 transition-colors duration-300">Ver Agendas</span>
-          <div
-            class="absolute inset-0 bg-[#00F5D4] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"
-          />
-          <div
-            class="absolute inset-0 shadow-[0_0_20px_#FF6B00] opacity-50 group-hover:opacity-100 transition-opacity duration-300"
-          />
+        class="flex flex-col md:flex-row gap-6 mt-8">
+        <a href="#agenda-arica"
+          class="group relative px-8 py-4 bg-[#FF6B00] text-white font-orbitron font-bold tracking-wider uppercase overflow-hidden rounded-sm
+          hover:bg-transparent hover:text-[#FF6B00] hover:outline hover:outline-2 hover:outline-[#FF6B00] hover:outline-offset-2">
+          <span class="relative z-10 transition-colors duration-300">Arica 11 - 13 de Junio</span>
+          <div class="absolute inset-0 bg-[#00F5D4] transform -translate-x-full group-hover:translate-x-0 group-hover:bg-transparent 
+            transition-transform duration-300 ease-out z-0"></div>
         </a>
-        <a
-          href="#tickets"
-          class="group px-8 py-4 border border-[#00F5D4] text-[#00F5D4] font-orbitron font-bold tracking-wider uppercase hover:bg-[#00F5D4]/10 transition-all duration-300 shadow-[0_0_10px_rgba(0,245,212,0.2)] hover:shadow-[0_0_20px_rgba(0,245,212,0.4)] rounded-sm"
-        >
-          Asegura tu entrada
+        <a href="#agenda-iquique"
+          class="group px-8 py-4 border border-[#00F5D4] text-[#00F5D4] font-orbitron font-bold tracking-wider uppercase hover:bg-[#00F5D4]/10 transition-all duration-300 shadow-[0_0_10px_rgba(0,245,212,0.2)] hover:shadow-[0_0_20px_rgba(0,245,212,0.4)] rounded-sm">
+          Iquique 16 y 17 de Junio
         </a>
       </div>
     </div>
 
     <!-- Scroll Indicator -->
-    <div
-      v-motion
-      :initial="{ opacity: 0 }"
-      :enter="{ opacity: 1, transition: { delay: 800, duration: 1000 } }"
-      class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-[#E6EAF0]/50"
-    >
-      <span class="text-[10px] uppercase tracking-[0.2em] font-orbitron"
-        >Explora el Ecosistema</span
-      >
+    <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { delay: 800, duration: 1000 } }"
+      class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-[#E6EAF0]/50">
+      <span class="text-[10px] uppercase tracking-[0.2em] font-orbitron">Explora el Ecosistema</span>
       <ArrowDown :size="20" class="animate-bounce" />
     </div>
 
     <!-- Bottom decorative line -->
     <div
-      class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#FF6B00]/50 to-transparent z-30"
-    />
+      class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#FF6B00]/50 to-transparent z-30" />
   </div>
 </template>
 
@@ -205,6 +167,7 @@ onUnmounted(() => stopAll());
 .bg-fade-leave-active {
   transition: opacity 1.5s ease;
 }
+
 .bg-fade-enter-from,
 .bg-fade-leave-to {
   opacity: 0;

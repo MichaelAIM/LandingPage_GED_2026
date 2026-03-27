@@ -1,6 +1,17 @@
 <template>
-  <footer class="bg-[#0B0F1A] border-t border-white/10 pt-16 pb-8 text-[#E6EAF0]">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+  <footer class="bg-[#0B0F1A] border-t border-white/10 pt-20 pb-8 text-[#E6EAF0]">
+    
+    <!-- Frase de Cierre -->
+    <div class="max-w-5xl mx-auto px-6 mb-20 text-center">
+      <h2 class="font-orbitron text-2xl md:text-4xl font-bold text-white mb-6 leading-relaxed">
+        GED 2026 reúne a quienes están construyendo el <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#00F5D4]">futuro desde el desierto</span>.
+      </h2>
+      <p class="font-inter text-[#E6EAF0]/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+        Más días, más territorios, más conexiones y una visión más amplia de lo que Arica e Iquique pueden aportar al mundo.
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-t border-white/10 pt-16">
       <div class="col-span-1 md:col-span-2">
         <h2 class="font-orbitron text-2xl font-bold text-white mb-4">
           EL GRAN ENCUENTRO <br /> DEL DESIERTO

@@ -14,15 +14,14 @@
             class="mb-4"
           >
             <span class="inline-block py-1 px-4 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/20 text-[#FF6B00] font-orbitron font-bold text-sm tracking-widest uppercase mb-4">
-              Día 1 / Sede Central
+              11 al 13 de junio
             </span>
             <h2 class="font-orbitron text-4xl md:text-5xl font-bold text-black/80">
               AGENDA <span class="text-[#FF6B00]">ARICA</span>
             </h2>
           </div>
           <div class="flex justify-center gap-6 text-black/60 font-mono text-sm">
-            <span class="flex items-center gap-2"><Calendar :size="14" /> JUN 12, 2026</span>
-            <span class="flex items-center gap-2"><MapPin :size="14" /> Central de Ferrocarriles</span>
+            <span class="flex items-center gap-2"><MapPin :size="14" /> Arica y Parinacota</span>
           </div>
         </div>
 
@@ -101,15 +100,14 @@
             class="mb-4"
           >
             <span class="inline-block py-1 px-4 rounded-full bg-[#00F5D4]/10 border border-[#00F5D4]/30 text-[#00F5D4] font-orbitron font-bold text-sm tracking-widest uppercase mb-4">
-              Día 2 / Expansión
+              16 al 17 de junio
             </span>
             <h2 class="font-orbitron text-4xl md:text-5xl font-bold text-black/80">
               AGENDA <span class="text-[#00F5D4]">IQUIQUE</span>
             </h2>
           </div>
           <div class="flex justify-center gap-6 text-black/60 font-mono text-sm">
-            <span class="flex items-center gap-2"><Calendar :size="14" /> JUN 16, 2026</span>
-            <span class="flex items-center gap-2"><MapPin :size="14" /> Playa Brava</span>
+            <span class="flex items-center gap-2"><MapPin :size="14" /> Tarapacá</span>
           </div>
         </div>
 
@@ -188,68 +186,15 @@ const getCategoryColor = (type: string) => categories[type]?.color ?? "#000";
 const getCategoryLabel = (type: string) => categories[type]?.label ?? type;
 
 const aricaAgenda = [
-  {
-    time: "08:30",
-    title: "Registro Arica",
-    desc: "Acreditación y acceso ecosistema.",
-    type: "social",
-  },
-  {
-    time: "09:30",
-    title: "Keynote: Bio-Resiliencia",
-    desc: "Inauguración oficial con foco en agrotecnología.",
-    type: "agro",
-  },
-  {
-    time: "11:00",
-    title: "Panel: Negocios Fronterizos",
-    desc: "Oportunidades de inversión en la puerta norte.",
-    type: "business",
-  },
-  {
-    time: "13:00",
-    title: "Networking Lunch",
-    desc: "Zona gastronómica con productos locales.",
-    type: "social",
-  },
-  {
-    time: "15:00",
-    title: "Tech-Showcase: Arica",
-    desc: "Demostración de startups Biotec y Patrimonio.",
-    type: "tech",
-  },
+  { time: "11 JUN", title: "Encuentro privado UAE – Arica y Parinacota", desc: "Una instancia de vinculación estratégica para abrir oportunidades de colaboración internacional.", type: "business" },
+  { time: "12 JUN", title: "El Gran Encuentro del Desierto 2026", desc: "Charlas magistrales y paneles sobre agricultura de próxima generación, logística del desierto y ecosistemas de innovación.", type: "agro" },
+  { time: "13 JUN AM", title: "Workshop: El futuro desde el desierto", desc: "Un espacio de trabajo con líderes y expertos para proyectar acciones concretas para el territorio.", type: "tech" },
+  { time: "13 JUN PM", title: "Fiesta oficial GED", desc: "Cierre social y celebración del encuentro.", type: "social" },
 ];
 
 const iquiqueAgenda = [
-  {
-    time: "09:00",
-    title: "Registro Iquique",
-    desc: "Check-in logístico y B2B Area.",
-    type: "social",
-  },
-  {
-    time: "10:30",
-    title: "Keynote: Hub Global",
-    desc: "El rol logístico del extremo norte conectando Asia.",
-    type: "logistics",
-  },
-  {
-    time: "12:00",
-    title: "Workshop: Macrozona Franca",
-    desc: "Innovación en modelos de negocio ZOFRI.",
-    type: "business",
-  },
-  {
-    time: "13:30",
-    title: "Almuerzo Corporativo",
-    desc: "Espacio de conexión con inversores y defensa.",
-    type: "social",
-  },
-  {
-    time: "15:30",
-    title: "Panel: Exploración Extrema",
-    desc: "Robótica y adaptación de la fuerza de trabajo.",
-    type: "tech",
-  },
+  { time: "16 JUN AM", title: "Charlas magistrales: espacio, minería y ecosistemas", desc: "Una jornada de visión global y conversación estratégica.", type: "tech" },
+  { time: "16 JUN PM", title: "Taller universitario NASA", desc: "Una experiencia formativa para universidades y emprendedores.", type: "tech" },
+  { time: "17 JUN", title: "Visitas en terreno", desc: "Recorridos por el desierto para conocer desarrollos sostenibles y agrícolas de nueva generación.", type: "agro" },
 ];
 </script>
