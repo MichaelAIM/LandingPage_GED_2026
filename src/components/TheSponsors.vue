@@ -1,24 +1,13 @@
 <template>
   <section class="py-20 bg-[#fff] border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h3
-        class="font-orbitron text-sm uppercase tracking-widest text-black/80 mb-12"
-      >
+      <h3 class="font-orbitron text-sm uppercase tracking-widest text-black/80 mb-12">
         Aliados del Ecosistema
       </h3>
-      <div
-        class="flex flex-wrap justify-center items-center gap-12 md-gap-24 transition-opacity duration-500"
-      >
-        <div
-          v-for="(sponsor, index) in sponsors"
-          :key="index"
-          class="group cursor-pointer grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-110"
-        >
-          <img
-            :src="sponsor.img"
-            :alt="sponsor.name"
-            class="w-36 h-36 object-contain"
-          />
+      <div class="flex flex-wrap justify-center items-center gap-12 md-gap-24 transition-opacity duration-500">
+        <div v-for="(sponsor, index) in sponsors" :key="index"
+          class="group cursor-pointer grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-110">
+          <img :src="sponsor.img" :alt="sponsor.name" class="w-36 h-36 object-contain" />
         </div>
       </div>
     </div>
@@ -37,8 +26,23 @@ import mikrolab from "../assets/mikrolab.webp";
 import ancestral from "../assets/ancestral.png";
 import arid from "../assets/Arid.png";
 import consorcio from "../assets/CONSORCIO.png";
+import zofri from "../assets/zofri.png";
+import solartrust from "../assets/solartrust.webp";
+import emiratos from "../assets/emiratos.webp";
+import nutrandes from "../assets/nutrandes.png";
+import prochile from "../assets/prochile.png";
+import comiteArica from "../assets/comiteArica.webp";
+import comiteTarapaca from "../assets/comiteTarapaca.webp";
+import sitrans from "../assets/SITRANS.webp";
+import ultraport from "../assets/ultraport.webp";
+import epa from "../assets/EPA.webp";
+import sqm from "../assets/sqm.png";
+import minciencias from "../assets/minciencias.png";
+import aldahara from "../assets/aldahara.webp";
+
 
 const sponsors = [
+
   {
     name: "WakiLabs",
     color: "text-[#FF6B00]",
@@ -90,10 +94,75 @@ const sponsors = [
     img: ancestral,
   },
   {
+    name: "Zofri",
+    color: "text-[#EF4444]",
+    img: zofri,
+  },
+  {
     name: "Arid",
     color: "text-[#EF4444]",
     img: arid,
   },
+  {
+    name: "solartrust",
+    color: "text-[#EF4444]",
+    img: solartrust,
+  },
+  {
+    name: "emiratos",
+    color: "text-[#EF4444]",
+    img: emiratos,
+  },
+  {
+    name: "prochile",
+    color: "text-[#EF4444]",
+    img: prochile,
+  },
+  {
+    name: "comiteArica",
+    color: "text-[#EF4444]",
+    img: comiteArica,
+  },
+  {
+    name: "comiteTarapaca",
+    color: "text-[#EF4444]",
+    img: comiteTarapaca,
+  },
+  {
+    name: "nutrandes",
+    color: "text-[#EF4444]",
+    img: nutrandes,
+  },
+  {
+    name: "sitrans",
+    color: "text-[#EF4444]",
+    img: sitrans,
+  },
+  {
+    name: "ultraport",
+    color: "text-[#EF4444]",
+    img: ultraport,
+  },
+  {
+    name: "epa",
+    color: "text-[#EF4444]",
+    img: epa,
+  },
+  {
+    name: "sqm",
+    color: "text-[#EF4444]",
+    img: sqm,
+  },
+  {
+    name: "minciencias",
+    color: "text-[#EF4444]",
+    img: minciencias,
+  },
+  {
+    name: "aldahara",
+    color: "text-[#EF4444]",
+    img: aldahara,
+  }
 ];
 </script>
 <style scoped>

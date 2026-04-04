@@ -44,11 +44,12 @@
         </h1>
 
         <p class="font-inter text-lg md:text-xl text-[#FF6B00] font-bold max-w-2xl mx-auto leading-relaxed mb-4">
-          Descubre cómo el desierto está impulsando el futuro tecnológico, logístico y sostenible.
+          Descubre cómo el desierto está impulsando el futuro tecnológico, logístico y sostenible, desde el Norte de
+          Chile.
         </p>
 
         <p class="font-inter text-md md:text-lg text-[#E6EAF0]/80 max-w-2xl mx-auto leading-relaxed">
-          Arica e Iquique se reúnen en una experiencia única, con más días de actividades, grandes referentes
+          Este año Arica e Iquique se reúnen en una experiencia única, con grandes referentes
           internacionales y una agenda diseñada para conectar territorio, ciencia e industria.
         </p>
       </div>
@@ -91,9 +92,11 @@ import { Moon, Sun, ArrowDown } from "lucide-vue-next";
 // --- Imágenes por modo ---
 import tutelares from "../assets/tutelares.jpg";
 import central from "../assets/central.webp";
+import desierto from "../assets/Desierto.jpg";
 const nightImages = [tutelares, central];
 
 const dayImages = [
+  desierto,
   "https://images.unsplash.com/photo-1623097048793-d37273f167a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBdGFjYW1hJTIwZGVzZXJ0JTIwc3VubnklMjBkdW5lc3xlbnwxfHx8fDE3NzE1NDM5Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
 ];
 

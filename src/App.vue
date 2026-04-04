@@ -1,22 +1,17 @@
 <template>
   <main
-    class="relative min-h-screen bg-[#0B0F1A] text-[#E6EAF0] overflow-x-hidden selection:bg-[#EC4899] selection:text-white"
-  >
+    class="relative min-h-screen bg-[#0B0F1A] text-[#E6EAF0] overflow-x-hidden selection:bg-[#EC4899] selection:text-white">
     <!-- Noise Texture -->
-    <div
-      class="fixed inset-0 z-50 pointer-events-none opacity-[0.04]"
-      :style="noiseStyle"
-    />
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-[0.04]" :style="noiseStyle" />
 
     <TheNavbar />
     <TheHero />
     <TheAbout />
     <TheTerritory />
     <TheAgenda />
-    <TheSpeakers />
-    <TheImpact />
-    <TheGallery />
+    <TheNasaWorkshop />
     <TheSponsors />
+    <TheGallery />
     <TheFooter />
   </main>
 </template>
@@ -32,9 +27,8 @@ import TheNavbar from "./components/TheNavbar.vue";
 import TheHero from "./components/TheHero.vue";
 import TheAbout from "./components/TheAbout.vue";
 import TheTerritory from "./components/TheTerritory.vue";
-import TheSpeakers from "./components/TheSpeakers.vue";
+import TheNasaWorkshop from "./components/TheNasaWorkshop.vue";
 import TheAgenda from "./components/TheAgenda.vue";
-import TheImpact from "./components/TheImpact.vue";
 import TheGallery from "./components/TheGallery.vue";
 import TheSponsors from "./components/TheSponsors.vue";
 import TheFooter from "./components/TheFooter.vue";

@@ -2,17 +2,38 @@
   <section id="territory" class="relative w-full bg-[#0B0F1A] overflow-hidden flex flex-col">
 
     <!-- Header Context -->
-    <div class="py-24 px-6 max-w-4xl mx-auto text-center relative z-20">
-      <h2 class="font-orbitron text-3xl md:text-5xl font-bold text-white mb-6">
+    <div class="py-24 py-3 max-w-4xl mx-auto text-center relative z-20">
+      <h2 class="font-orbitron text-3xl md:text-5xl font-bold text-white mb-8">
         DOS CIUDADES, <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#00F5D4]">UN
           ECOSISTEMA</span>
       </h2>
+    </div>
+
+    <div class="max-w-5xl mx-auto text-center relative z-20">
       <p class="font-inter text-[#E6EAF0]/80 text-lg md:text-xl leading-relaxed">
-        GED 2026 propone una experiencia territorial y diversa, donde cada ciudad aporta una mirada distinta. Arica abre
-        el encuentro con actividades estratégicas, diálogo internacional y un cierre de alto impacto; Iquique continúa
-        con una agenda centrada en espacio, minería, sostenibilidad, visitas en terreno y trabajo con universidades. No
-        es un solo evento: son varias puertas de entrada al futuro del desierto.
+        Desde el corazón del desierto, al Gran Encuentro
+        del Desierto, junto a WakiLabs, Codesser y el Consorcio del Desierto, están encendiendo el motor de la
+        innovación en el norte de Chile.
+        <br>
+        Este año Arica marca el inicio con una agenda orientada a la articulación estratégica, el diálogo internacional
+        y
+        actividades de alto impacto. E
+        Iquique toma la posta con foco en espacio, minería y sostenibilidad, conectando con el territorio, la industria
+        y la academia.
       </p>
+    </div>
+
+    <div class="w-full relative z-30 py-8">
+      <div class="max-w-7xl mx-auto px-6 overflow-x-auto hide-scrollbar">
+        <div
+          class="flex flex-row flex-nowrap justify-start md:justify-center items-center gap-12 md:gap-24 min-w-max w-full">
+          <div v-for="(staff, index) in staffs" :key="index"
+            class="group cursor-pointer transition-all duration-300 hover:scale-110 flex-shrink-0">
+            <img :src="staff.img" :alt="staff.name"
+              :class="['object-contain', staff.customClass || 'w-32 h-32 md:w-36 md:h-36']" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Split Screen Container -->
@@ -41,7 +62,7 @@
           <h2 class="font-orbitron text-4xl md:text-6xl font-black text-white mb-2 drop-shadow-lg">ARICA</h2>
           <div class="h-1 w-12 bg-[#FF6B00] mb-6 transition-all duration-500 group-hover:w-32" />
 
-          <p class="font-inter text-white/90 text-lg leading-relaxed mb-8 transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:block"
+          <p class="font-inter text-white/90 text-lg leading-relaxed mb-2 transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:block"
             :class="hoveredSide === 'arica' ? 'md:block md:opacity-100 md:translate-y-0' : 'md:hidden'">
             Del 11 al 13 de junio, Arica será el corazón de las actividades iniciales. Aquí se desarrollarán instancias
             privadas de vinculación internacional, el evento central GED, el workshop “El futuro desde el desierto”, el
@@ -50,7 +71,7 @@
           </p>
 
           <div
-            class="flex flex-wrap gap-2 transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:flex"
+            class="flex flex-wrap gap-2 transform mb-8 transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:flex"
             :class="hoveredSide === 'arica' ? 'md:flex md:opacity-100 md:translate-y-0' : 'md:hidden'">
             <span
               class="px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs text-white">#AgTech</span>
@@ -60,10 +81,15 @@
               class="px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs text-white">#Frontera</span>
           </div>
 
+          <p
+            class="font-inter text-white/90 text-lg leading-relaxed transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:block">
+            No dejes pasar esta oportunidad: acceso solo con registro y cupos limitados.
+          </p>
+
           <div class="flex mt-4">
             <a href="#agenda" class="px-8 py-4 bg-[#FF6B00] text-white font-orbitron font-bold tracking-wider uppercase rounded-sm
           hover:ring-2 hover:ring-[#FF6B00] hover:ring-offset-2">
-              Asegura tu entrada
+              Reserva tu cupo ya.
             </a>
 
           </div>
@@ -97,7 +123,7 @@
           <h2 class="font-orbitron text-4xl md:text-6xl font-black text-white mb-2 drop-shadow-lg">IQUIQUE</h2>
           <div class="h-1 w-12 bg-[#00F5D4] mb-6 transition-all duration-500 group-hover:w-32 md:ml-auto" />
 
-          <p class="font-inter text-white/90 text-lg leading-relaxed mb-8 transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:block"
+          <p class="font-inter text-white/90 text-lg leading-relaxed mb-2 transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:block"
             :class="hoveredSide === 'iquique' ? 'md:block md:opacity-100 md:translate-y-0' : 'md:hidden'">
             Los días 16 y 17 de junio, Iquique/Tarapacá concentrará una agenda enfocada en charlas magistrales sobre
             espacio, minería y ecosistemas del futuro, un taller universitario con NASA y visitas en terreno para
@@ -106,7 +132,7 @@
           </p>
 
           <div
-            class="flex flex-wrap gap-2 md:justify-end transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:flex"
+            class="flex flex-wrap gap-2 md:justify-end mb-8 transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:flex"
             :class="hoveredSide === 'iquique' ? 'md:flex md:opacity-100 md:translate-y-0' : 'md:hidden'">
             <span
               class="px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs text-white">#Logística</span>
@@ -115,6 +141,11 @@
             <span
               class="px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs text-white">#Negocios</span>
           </div>
+
+          <p
+            class="font-inter text-white/90 text-lg leading-relaxed transform transition-all duration-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 md:hidden group-hover:block">
+            Los cupos gratuitos están volando. Regístrate ahora o quédate fuera.
+          </p>
 
           <div class="flex md:justify-end mt-4">
             <a href="#tickets"
@@ -137,4 +168,47 @@
 import { ref } from 'vue'
 
 const hoveredSide = ref<'arica' | 'iquique' | null>(null)
+
+import Waki from "../assets/waki-logo-01-1024x280.png";
+import CORFO from "../assets/CORFO.png";
+import GED from "../assets/LOGO_GED.png";
+import codesser from "../assets/logo-codesser.png";
+import consorcio from "../assets/LOGOCONSORCIO-VERDE.png";
+
+interface Staff {
+  name: string;
+  color: string;
+  img: string;
+  customClass?: string;
+}
+
+const staffs: Staff[] = [
+  {
+    name: "WakiLabs",
+    color: "text-[#FF6B00]",
+    img: Waki,
+  },
+  {
+    name: "Consorcio del Desierto",
+    color: "text-[#FFC857]",
+    img: consorcio,
+  },
+  {
+    name: "Gran Encuentro del desierto",
+    color: "text-[#3B82F6]",
+    img: GED,
+    customClass: "w-40 h-40 md:w-44 md:h-44",
+  },
+  {
+    name: "CORFO",
+    color: "text-[#00F5D4]",
+    img: CORFO,
+  },
+  {
+    name: "codesser",
+    color: "text-[#3B82F6]",
+    img: codesser,
+    customClass: "w-20 h-20 md:w-24 md:h-24",
+  }
+];
 </script>
