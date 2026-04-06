@@ -1,12 +1,12 @@
 <template>
-  <section class="py-20 bg-[#fff] border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h3 class="font-orbitron text-sm uppercase tracking-widest text-black/80 mb-12">
+  <section class="py-32 md:py-40 bg-slate-50 border-t border-black/5 relative">
+    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+      <span class="inline-block py-1.5 px-5 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] font-mono text-xs uppercase tracking-widest mb-12 font-bold">
         Aliados del Ecosistema
-      </h3>
+      </span>
       <div class="flex flex-wrap justify-center items-center gap-12 md-gap-24 transition-opacity duration-500">
         <div v-for="(sponsor, index) in sponsors" :key="index"
-          class="group cursor-pointer grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-110">
+          class="group cursor-pointer grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110">
           <img :src="sponsor.img" :alt="sponsor.name" class="w-36 h-36 object-contain" />
         </div>
       </div>

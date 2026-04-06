@@ -1,14 +1,14 @@
 <template>
-  <footer class="bg-[#0B0F1A] border-t border-white/10 pt-20 pb-8 text-[#E6EAF0]">
+  <footer class="bg-[#0B0F1A] border-t border-white/10 pt-32 md:pt-48 pb-16 text-[#E6EAF0]">
 
     <!-- Frase de Cierre -->
     <div class="max-w-5xl mx-auto px-6 mb-20 text-center">
-      <h2 class="font-orbitron text-2xl md:text-4xl font-bold text-white mb-6 leading-relaxed">
+      <h2 class="font-orbitron text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
         GED 2026 reúne a quienes están construyendo el <span
           class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#00F5D4]">futuro desde el
           desierto</span>.
       </h2>
-      <p class="font-inter text-[#E6EAF0]/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+      <p class="font-inter font-light text-[#E6EAF0]/80 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
         Más días, más territorios, más conexiones y una visión más amplia de lo que Arica e Iquique pueden aportar al
         mundo.
       </p>
@@ -19,7 +19,7 @@
         <h2 class="font-orbitron text-2xl font-bold text-white mb-4">
           EL GRAN ENCUENTRO <br /> DEL DESIERTO
         </h2>
-        <p class="text-[#E6EAF0]/60 max-w-sm mb-6">
+        <p class="font-inter text-[#E6EAF0]/60 max-w-sm mb-6 font-light text-sm md:text-base">
           Donde la innovación y la sostenibilidad se encuentran en el extremo norte de Chile. Organizado por
           WakiLabs.
         </p>
@@ -42,9 +42,9 @@
 
       <div>
         <h3 class="font-orbitron text-lg font-bold text-white mb-6">Contacto</h3>
-        <ul class="space-y-4 text-[#E6EAF0]/60">
+        <ul class="space-y-4 text-[#E6EAF0]/60 font-inter font-light text-sm hover:[&_a]:text-[#00F5D4]">
           <li class="flex items-center gap-2">
-            <Mail :size="16" /> contacto@wakilabs.cl
+            <Mail :size="16" /> <a href="mailto:contacto@wakilabs.cl" class="transition-colors">contacto@wakilabs.cl</a>
           </li>
           <li>Si quieres saber más, visita nuestro sitio web</li>
         </ul>

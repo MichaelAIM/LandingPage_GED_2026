@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#0B0F1A] relative overflow-hidden">
-    <section id="speakers" class="py-24 md:py-32 relative border-t border-white/5">
+    <section id="speakers" class="py-32 md:py-48 relative border-t border-white/5">
       <!-- Background Glow -->
       <div class="absolute inset-0 z-0">
         <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#FF6B00]/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -12,13 +12,13 @@
         <div class="text-center mb-20 md:mb-24" v-motion :initial="{ opacity: 0, y: 20 }"
           :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }">
           <span
-            class="inline-block py-1.5 px-5 rounded-full bg-white/5 border border-white/10 text-white/70 font-orbitron font-bold text-xs tracking-widest uppercase mb-6">
+            class="inline-block py-1.5 px-5 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] font-mono font-bold text-xs tracking-widest uppercase mb-6">
             Líderes de la Industria
           </span>
           <h2 class="font-orbitron text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tight">
-            Nuestros <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#00F5D4] drop-shadow-sm">Expertos</span>
+            Nuestros <span class="text-[#FF6B00]">Expertos</span>
           </h2>
-          <p class="font-inter text-[#E6EAF0]/60 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed">
+          <p class="font-inter text-slate-300 max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed">
             Mentes maestras de todo el mundo se reúnen en el desierto para proyectar el futuro de la minería, innovación, y exploración agro-espacial.
           </p>
         </div>
@@ -40,7 +40,7 @@
               <div class="absolute top-3 left-3 right-3 z-20">
                 <span
                   class="inline-flex py-1 px-3 rounded-full text-[9px] font-bold uppercase tracking-widest bg-black/80 backdrop-blur-md border border-white/20 text-white shadow-lg items-center truncate max-w-full">
-                  <span class="w-1.5 h-1.5 rounded-full mr-2 shrink-0 shadow-[0_0_5px_currentColor]" :class="index % 2 === 0 ? 'bg-[#FF6B00] text-[#FF6B00]' : 'bg-[#00F5D4] text-[#00F5D4]'"></span>
+                  <span class="w-1.5 h-1.5 rounded-full mr-2 shrink-0 bg-[#FF6B00] shadow-[0_0_5px_currentColor] text-[#FF6B00]"></span>
                   <span class="truncate">{{ speaker.tag }}</span>
                 </span>
               </div>
@@ -50,10 +50,10 @@
             <div class="p-5 lg:p-4 xl:p-6 relative flex flex-col flex-grow bg-[#121A2F]">
               <!-- Role & Name -->
               <div class="mb-4">
-                <p class="text-[#E6EAF0]/60 font-inter text-[9.5px] font-bold uppercase tracking-widest mb-2 min-h-[32px] flex items-center leading-snug line-clamp-2">
+                <p class="text-[#FF6B00] font-mono text-[9.5px] font-bold tracking-widest uppercase mb-2 min-h-[32px] flex items-center leading-snug line-clamp-2">
                   {{ speaker.role }}
                 </p>
-                <h3 class="font-orbitron text-[1.1rem] xl:text-lg font-black text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#FF6B00] group-hover:to-[#00F5D4] transition-all duration-500 leading-tight">
+                <h3 class="font-orbitron text-xl md:text-2xl font-bold text-white group-hover:text-[#FF6B00] transition-colors duration-500 leading-tight">
                   {{ speaker.name }}
                 </h3>
               </div>
@@ -61,13 +61,13 @@
               <!-- Highlight Quote -->
               <div class="mt-auto pt-4 border-t border-white/5 relative">
                 <QuoteIcon class="absolute top-3 left-0 text-white/5 w-8 h-8 -z-0 transition-colors duration-500 group-hover:text-white/10" />
-                <p class="font-inter text-[12px] xl:text-[13px] text-[#E6EAF0]/70 italic relative z-10 leading-relaxed font-light">
+                <p class="font-inter text-[12px] xl:text-[13px] text-slate-400 italic relative z-10 leading-relaxed font-light">
                   "{{ speaker.quote }}"
                 </p>
               </div>
               
               <!-- Bottom gradient bar -->
-              <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF6B00] to-[#00F5D4] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="absolute bottom-0 left-0 w-full h-1 bg-[#FF6B00] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
         </div>
