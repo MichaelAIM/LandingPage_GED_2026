@@ -143,7 +143,7 @@
             class="mb-4"
           >
             <span
-              class="inline-block py-1.5 px-5 rounded-full bg-[#00F5D4]/10 border border-[#00F5D4]/30 text-[#00F5D4] font-mono font-bold text-xs tracking-widest uppercase mb-6"
+              class="inline-block py-1.5 px-5 rounded-full bg-[#0B0F1A]/50 border border-[#00F5D4]/30 text-[#00F5D4] font-mono font-bold text-xs tracking-widest uppercase mb-6"
             >
               16 al 17 de junio
             </span>
