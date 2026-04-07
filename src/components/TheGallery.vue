@@ -256,17 +256,17 @@
 import { ZoomIn, X, ChevronLeft, ChevronRight } from "lucide-vue-next";
 import { ref, onMounted, onUnmounted } from "vue";
 
-import img1 from "../assets/ged2024/1.jpg";
-import img2 from "../assets/ged2024/2.jpg";
-import img3 from "../assets/ged2024/3.jpg";
-import img4 from "../assets/ged2024/12.jpg";
-import img5 from "../assets/ged2024/5.jpg";
-import img6 from "../assets/ged2024/6.jpg";
-import img7 from "../assets/ged2024/7.jpg";
-import img8 from "../assets/ged2024/13.jpg";
-import img9 from "../assets/ged2024/9.jpg";
-import img10 from "../assets/ged2024/14.jpg";
-import img11 from "../assets/ged2024/4.jpg";
+import img1 from "../assets/Ged2024/1.jpg";
+import img2 from "../assets/Ged2024/2.jpg";
+import img3 from "../assets/Ged2024/3.jpg";
+import img4 from "../assets/Ged2024/12.jpg";
+import img5 from "../assets/Ged2024/5.jpg";
+import img6 from "../assets/Ged2024/6.jpg";
+import img7 from "../assets/Ged2024/7.jpg";
+import img8 from "../assets/Ged2024/13.jpg";
+import img9 from "../assets/Ged2024/9.jpg";
+import img10 from "../assets/Ged2024/14.jpg";
+import img11 from "../assets/Ged2024/4.jpg";
 
 const images = [
   img1,
