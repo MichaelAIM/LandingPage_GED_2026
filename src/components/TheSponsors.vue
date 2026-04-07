@@ -1,13 +1,24 @@
 <template>
   <section class="py-32 md:py-40 bg-slate-50 border-t border-black/5 relative">
     <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-      <span class="inline-block py-1.5 px-5 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] font-mono text-xs uppercase tracking-widest mb-12 font-bold">
+      <span
+        class="inline-block py-1.5 px-5 rounded-full bg-[#f928a9]/10 border border-[#f928a9]/30 text-[#f928a9] font-mono text-xs uppercase tracking-widest mb-12 font-bold"
+      >
         Aliados del Ecosistema
       </span>
-      <div class="flex flex-wrap justify-center items-center gap-12 md-gap-24 transition-opacity duration-500">
-        <div v-for="(sponsor, index) in sponsors" :key="index"
-          class="group cursor-pointer grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110">
-          <img :src="sponsor.img" :alt="sponsor.name" class="w-36 h-36 object-contain" />
+      <div
+        class="flex flex-wrap justify-center items-center gap-12 md-gap-24 transition-opacity duration-500"
+      >
+        <div
+          v-for="(sponsor, index) in sponsors"
+          :key="index"
+          class="group cursor-pointer transition-all duration-500 hover:scale-110"
+        >
+          <img
+            :src="sponsor.img"
+            :alt="sponsor.name"
+            class="w-36 h-36 object-contain"
+          />
         </div>
       </div>
     </div>
@@ -40,9 +51,7 @@ import sqm from "../assets/sqm.png";
 import minciencias from "../assets/minciencias.png";
 import aldahara from "../assets/aldahara.webp";
 
-
 const sponsors = [
-
   {
     name: "WakiLabs",
     color: "text-[#FF6B00]",
@@ -162,7 +171,7 @@ const sponsors = [
     name: "aldahara",
     color: "text-[#EF4444]",
     img: aldahara,
-  }
+  },
 ];
 </script>
 <style scoped>

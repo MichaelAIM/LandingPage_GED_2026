@@ -28,7 +28,7 @@
             Líderes de la Industria
           </span>
           <h2
-            class="font-orbitron text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 uppercase tracking-tight"
+            class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-white mb-6 uppercase tracking-tight"
           >
             Nuestros
             <span

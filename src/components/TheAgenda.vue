@@ -24,7 +24,7 @@
               11 al 13 de junio
             </span>
             <h2
-              class="font-orbitron text-4xl md:text-5xl lg:text-6xl font-black text-slate-900"
+              class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-slate-900"
             >
               AGENDA <span class="text-[#f928a9]">ARICA</span>
             </h2>
@@ -148,7 +148,7 @@
               16 al 17 de junio
             </span>
             <h2
-              class="font-orbitron text-4xl md:text-5xl lg:text-6xl font-black text-slate-900"
+              class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-slate-900"
             >
               AGENDA <span class="text-[#00F5D4]">IQUIQUE</span>
             </h2>

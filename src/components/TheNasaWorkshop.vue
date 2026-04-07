@@ -60,7 +60,7 @@
           </p>
 
           <h2
-            class="font-orbitron font-black text-5xl md:text-6xl lg:text-[4.5rem] text-white mb-8 leading-[1.05] uppercase drop-shadow-2xl"
+            class="font-orbitron font-black text-2xl md:text-4xl lg:text-5xl text-white mb-8 leading-[1.05] uppercase drop-shadow-2xl"
           >
             Taller <br class="hidden sm:block" />
             <span

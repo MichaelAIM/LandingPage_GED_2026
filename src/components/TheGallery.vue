@@ -267,6 +267,8 @@ import img8 from "../assets/Ged2024/13.jpg";
 import img9 from "../assets/Ged2024/9.jpg";
 import img10 from "../assets/Ged2024/14.jpg";
 import img11 from "../assets/Ged2024/4.jpg";
+import img12 from "../assets/encuentro2024.jpg";
+import img13 from "../assets/Ged2024/4.jpg";
 
 const images = [
   img1,
@@ -280,6 +282,8 @@ const images = [
   img9,
   img10,
   img11,
+  img12,
+  img13,
 ];
 
 // Lightbox logic
