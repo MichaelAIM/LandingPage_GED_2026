@@ -90,6 +90,14 @@
                   >
                     {{ item.desc }}
                   </p>
+                  <router-link
+                    v-if="item.button.label"
+                    :to="item.button.href"
+                    rel="noreferrer"
+                    class="mt-4 inline-block px-4 py-2 bg-[#f928a9] text-white font-bold rounded hover:bg-[#f928a9]/80 transition-colors"
+                  >
+                    {{ item.button.label }}
+                  </router-link>
                 </div>
               </div>
 
@@ -143,14 +151,14 @@
             class="mb-4"
           >
             <span
-              class="inline-block py-1.5 px-5 rounded-full bg-[#0B0F1A]/50 border border-[#00F5D4]/30 text-[#00F5D4] font-mono font-bold text-xs tracking-widest uppercase mb-6"
+              class="inline-block py-1.5 px-5 rounded-full bg-[#0B0F1A]/50 border border-[#38BDF8]/30 text-[#38BDF8] font-mono font-bold text-xs tracking-widest uppercase mb-6"
             >
               16 al 17 de junio
             </span>
             <h2
               class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-slate-900"
             >
-              AGENDA <span class="text-[#00F5D4]">IQUIQUE</span>
+              AGENDA <span class="text-[#38BDF8]">IQUIQUE</span>
             </h2>
           </div>
           <div
@@ -165,7 +173,7 @@
         <!-- Timeline Iquique -->
         <div class="relative">
           <div
-            class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#00F5D4]/40 to-transparent md:-translate-x-1/2"
+            class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#38BDF8]/40 to-transparent md:-translate-x-1/2"
           />
 
           <div class="space-y-8">
@@ -185,7 +193,7 @@
               <!-- Content Card -->
               <div class="flex-1 w-full pl-16 md:pl-0">
                 <div
-                  class="group relative p-6 xl:p-8 bg-white rounded-2xl border border-black/5 hover:border-[#00F5D4]/40 transition-all duration-300 hover:shadow-[0_15px_30px_rgba(0,0,0,0.05)] hover:-translate-y-1"
+                  class="group relative p-6 xl:p-8 bg-white rounded-2xl border border-black/5 hover:border-[#38BDF8]/40 transition-all duration-300 hover:shadow-[0_15px_30px_rgba(0,0,0,0.05)] hover:-translate-y-1"
                   :class="index % 2 === 0 ? 'md:text-left' : 'md:text-right'"
                 >
                   <div
@@ -205,7 +213,7 @@
                     </span>
                   </div>
                   <h3
-                    class="font-orbitron text-xl font-bold text-slate-900 mb-3 group-hover:text-[#00F5D4] transition-colors leading-tight"
+                    class="font-orbitron text-xl font-bold text-slate-900 mb-3 group-hover:text-[#38BDF8] transition-colors leading-tight"
                   >
                     {{ item.title }}
                   </h3>
@@ -214,6 +222,13 @@
                   >
                     {{ item.desc }}
                   </p>
+                  <router-link
+                    v-if="item.button.label"
+                    :to="item.button.href"
+                    class="mt-4 inline-block px-4 py-2 bg-[#38BDF8] text-white font-bold pointer-events-auto rounded hover:bg-[#38BDF8]/80 transition-colors"
+                  >
+                    {{ item.button.label }}
+                  </router-link>
                 </div>
               </div>
 
@@ -221,7 +236,7 @@
               <div
                 class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-4 h-4 rounded-full bg-white border-2 border-[#00F5D4]/40 z-10 shadow-[0_0_10px_rgba(255,107,0,0.2)]"
               >
-                <div class="w-1.5 h-1.5 rounded-full bg-[#00F5D4]" />
+                <div class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]" />
               </div>
 
               <!-- Time -->
@@ -231,12 +246,12 @@
                   index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'
                 "
               >
-                <span class="font-mono text-2xl font-bold text-[#00F5D4]">{{
+                <span class="font-mono text-2xl font-bold text-[#38BDF8]">{{
                   item.time
                 }}</span>
               </div>
               <div class="absolute left-14 -top-1 md:hidden">
-                <span class="font-mono text-sm font-bold text-[#00F5D4]">{{
+                <span class="font-mono text-sm font-bold text-[#38BDF8]">{{
                   item.time
                 }}</span>
               </div>
@@ -269,24 +284,28 @@ const aricaAgenda = [
     title: "Encuentro privado UAE – Arica y Parinacota",
     desc: "Una instancia de vinculación estratégica para abrir oportunidades de colaboración internacional.",
     type: "business",
+    button: { label: "", href: "" },
   },
   {
     time: "12 JUN",
     title: "El Gran Encuentro del Desierto 2026",
     desc: "Charlas magistrales y paneles sobre agricultura de próxima generación, logística del desierto y ecosistemas de innovación.",
     type: "agro",
+    button: { label: "Reserva ahora", href: "/registro-arica" },
   },
   {
     time: "13 JUN AM",
     title: "Workshop: El futuro desde el desierto",
     desc: "Un espacio de trabajo con líderes y expertos para proyectar acciones concretas para el territorio.",
     type: "tech",
+    button: { label: "", href: "" },
   },
   {
     time: "13 JUN PM",
     title: "Fiesta oficial GED",
     desc: "Cierre social y celebración del encuentro.",
     type: "social",
+    button: { label: "", href: "" },
   },
 ];
 
@@ -296,18 +315,21 @@ const iquiqueAgenda = [
     title: "Charlas magistrales: espacio, minería y ecosistemas",
     desc: "Una jornada de visión global y conversación estratégica.",
     type: "tech",
+    button: { label: "Reserva ahora", href: "/registro-iquique" },
   },
   {
     time: "16 JUN PM",
     title: "Taller universitario NASA",
     desc: "Una experiencia formativa para universidades y emprendedores.",
     type: "tech",
+    button: { label: "", href: "" },
   },
   {
     time: "17 JUN",
     title: "Visitas en terreno",
     desc: "Recorridos por el desierto para conocer desarrollos sostenibles y agrícolas de nueva generación.",
     type: "agro",
+    button: { label: "", href: "" },
   },
 ];
 </script>

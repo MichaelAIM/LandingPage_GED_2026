@@ -141,30 +141,32 @@ import Bruce from "../assets/Bruce.png";
 import Stuart from "../assets/Stuart.png";
 import Sigfredo from "../assets/Sigfredo.png";
 import Pablo from "../assets/Pablo.png";
+import Pamela from "../assets/PAMELA-VILLARREAL.jpg";
+import Trent from "../assets/trent-nasa.png";
 
 const speakers = [
   {
     img: Bruce,
-    name: "Bruce Bugbee",
+    name: "Dr. Bruce M. Link.",
     role: "Investigador Principal NASA / Utah State",
     quote:
       "La adaptación biológica a entornos extremos es la clave para la supervivencia humana a largo plazo.",
     tag: "Biotecnología",
   },
   {
-    img: Pablo,
-    name: "Pablo Zamora",
-    role: "Presidente Fundación Chile",
+    img: Stuart,
+    name: "Stuart J. Donald.",
+    role: "Director Global de Agricultura. Grupo Al Dahra de Emiratos Árabes.",
     quote:
-      "El modelo de inversión corporativa debe evolucionar hacia un ecosistema integrado transfronterizo.",
-    tag: "Innovación Corp.",
+      "La agricultura del futuro es una sinergia entre tecnología de punta y prácticas sostenibles, impulsando la seguridad alimentaria global.",
+    tag: "Agronegocios",
   },
   {
-    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
+    img: Pamela,
     name: "Pamela Villarreal",
     role: "CEO OTIF (México)",
     quote:
-      "La integración de cadenas globales requiere una visión de futuro y puesta en la innovación.",
+      "Transformando la eficiencia de la logística global y la cadena de suministro mediante IA disruptiva y tecnología sostenible.",
     tag: "Innovación",
   },
   {
@@ -176,11 +178,11 @@ const speakers = [
     tag: "Ag-Tech",
   },
   {
-    img: Stuart,
+    img: Trent,
     name: "Dr. Trent Smith",
-    role: "CEO Alesca Life Tech.",
+    role: "Asesor de Investigación para la Producción de Cultivos Espaciales en la NASA",
     quote:
-      "La automatización de ecosistemas controlados revolucionará la matriz productiva del norte.",
+      "Desarrollando tecnologías de cultivo espacial para la exploración humana a largo plazo y la sostenibilidad en la Tierra.",
     tag: "Ing. Espacial",
   },
 ];

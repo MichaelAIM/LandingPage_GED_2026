@@ -70,7 +70,7 @@
         />
 
         <h1
-          class="font-orbitron text-1xl md:text-3xl lg:text-4xl font-black text-white uppercase tracking-tight leading-tight mb-6"
+          class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight leading-tight mb-6"
         >
           innovación, negocios y futuro
         </h1>
@@ -99,7 +99,8 @@
         class="flex flex-col md:flex-row gap-6 mt-8"
       >
         <a
-          href="#agenda-arica"
+          href="#territory-section"
+          @click.prevent="scrollToTerritory('arica')"
           class="group relative px-8 py-4 bg-[#f928a9] text-white font-orbitron font-bold tracking-wider uppercase overflow-hidden rounded-sm hover:bg-transparent hover:text-[#f928a9] hover:outline hover:outline-2 hover:outline-[#f928a9] hover:outline-offset-2"
         >
           <span class="relative z-10 transition-colors duration-300"
@@ -110,7 +111,8 @@
           ></div>
         </a>
         <a
-          href="#agenda-iquique"
+          href="#territory-section"
+          @click.prevent="scrollToTerritory('iquique')"
           class="group px-8 py-4 border border-[#00F5D4] text-[#00F5D4] font-orbitron font-bold tracking-wider uppercase hover:bg-white/10 transition-all duration-300 rounded-sm"
         >
           Iquique 16 y 17 de Junio
@@ -202,6 +204,14 @@ const startModeToggle = () => {
   modeInterval = setInterval(() => {
     isNight.value = !isNight.value;
   }, 7000);
+};
+
+const scrollToTerritory = (side: "arica" | "iquique") => {
+  const target = document.querySelector("#territory-section");
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  window.dispatchEvent(new CustomEvent("territory-hover", { detail: side }));
 };
 
 const handleManualToggle = () => {

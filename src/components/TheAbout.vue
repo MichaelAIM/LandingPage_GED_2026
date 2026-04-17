@@ -78,7 +78,7 @@
 
           <video
             ref="videoRef"
-            src="../assets/presentacion.mp4"
+            src="../assets/presentacion2.mp4"
             class="relative w-full h-full object-cover z-10 rounded-2xl outline-none"
             controls
             playsinline

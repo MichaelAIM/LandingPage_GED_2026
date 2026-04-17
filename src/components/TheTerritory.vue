@@ -1,11 +1,11 @@
 <template>
   <section
     id="territory"
-    class="relative w-full bg-[#0B0F1A] overflow-hidden flex flex-col"
+    class="relative w-full bg-[#0B0F1A] overflow-hidden flex flex-col py-16 md:py-24"
   >
     <!-- Header Context -->
     <div
-      class="pt-24 md:pt-16 pb-16 px-6 max-w-5xl mx-auto text-center relative z-20"
+      class="pt-8 md:pt-0 pb-12 px-6 max-w-5xl mx-auto text-center relative z-20"
     >
       <h2 class="font-orbitron text-2xl lg:text-5xl font-black text-white mb-8">
         DOS CIUDADES,
@@ -32,7 +32,7 @@
       </p>
     </div>
     <!-- Seccion staff -->
-    <div class="w-full relative z-30 py-8 overflow-hidden">
+    <div class="w-full relative z-30 py-12 overflow-hidden">
       <!-- Escritorio: estático centrado -->
       <div
         class="hidden md:flex max-w-7xl mx-auto px-6 overflow-x-auto hide-scrollbar"
@@ -93,7 +93,8 @@
     <!-- Seccion territorio -->
     <!-- Split Screen Container -->
     <div
-      class="relative w-full h-auto min-h-screen md:h-[70vh] md:min-h-[500px] flex flex-col md:flex-row"
+      class="relative w-full h-auto min-h-screen md:h-[70vh] md:min-h-[500px] flex flex-col md:flex-row mt-10 md:mt-12"
+      id="territory-section"
     >
       <!-- ARICA (Left Side) -->
       <div
@@ -204,12 +205,12 @@
           </p>
 
           <div class="flex mt-4">
-            <a
-              href="#agenda"
+            <router-link
+              to="/registro-arica"
               class="px-8 py-4 bg-[#f928a9] text-white font-orbitron font-bold tracking-wider uppercase rounded-sm hover:ring-2 hover:ring-[#f928a9] hover:ring-offset-2"
             >
               Reserva tu cupo ya.
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -323,12 +324,12 @@
           </p>
 
           <div class="flex md:justify-end mt-4">
-            <a
-              href="#tickets"
+            <router-link
+              to="/registro-iquique"
               class="group px-8 py-4 border border-[#00F5D4] text-[#00F5D4] font-orbitron font-bold tracking-wider uppercase hover:bg-[#00F5D4]/10 transition-all duration-300 shadow-[0_0_10px_rgba(0,245,212,0.2)] hover:shadow-[0_0_20px_rgba(0,245,212,0.4)] rounded-sm"
             >
               Asegura tu entrada
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -353,7 +354,19 @@ const iquiqueRef = ref<HTMLElement | null>(null);
 
 let observer: IntersectionObserver | null = null;
 
+const handleTerritoryHover = (event: Event) => {
+  const customEvent = event as CustomEvent<"arica" | "iquique">;
+  if (customEvent?.detail === "arica" || customEvent?.detail === "iquique") {
+    hoveredSide.value = customEvent.detail;
+  }
+};
+
 onMounted(() => {
+  window.addEventListener(
+    "territory-hover",
+    handleTerritoryHover as EventListener,
+  );
+
   observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -371,6 +384,10 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
+  window.removeEventListener(
+    "territory-hover",
+    handleTerritoryHover as EventListener,
+  );
   if (observer) {
     observer.disconnect();
   }

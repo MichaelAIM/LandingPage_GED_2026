@@ -13,7 +13,8 @@
     "@vueuse/motion": "^2.2.0",
     "defu": "^6.1.4",
     "lucide-vue-next": "^0.487.0",
-    "vue": "^3.4.0"
+    "vue": "^3.4.0",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",

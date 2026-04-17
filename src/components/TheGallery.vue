@@ -1,7 +1,7 @@
 <template>
   <section
     id="gallery"
-    class="py-24 md:py-32 bg-[#050810] relative overflow-hidden"
+    class="py-32 md:py-48 bg-[#050810] relative overflow-hidden"
   >
     <!-- Abstract Tech Background -->
     <div class="absolute inset-0 z-0">
@@ -328,7 +328,7 @@ const stats = [
     glowClass: "bg-[#3B82F6]",
   },
   {
-    value: 400,
+    value: 1000,
     prefix: "+",
     label: "Asistentes",
     color: "text-[#00F5D4]",
