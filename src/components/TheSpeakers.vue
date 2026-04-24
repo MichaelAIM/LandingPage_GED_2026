@@ -7,10 +7,10 @@
       <!-- Background Glow -->
       <div class="absolute inset-0 z-0">
         <div
-          class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#FF6B00]/5 rounded-full blur-[120px] pointer-events-none"
+          class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#C96B35]/5 rounded-full blur-[120px] pointer-events-none"
         ></div>
         <div
-          class="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-[#00F5D4]/5 rounded-full blur-[150px] pointer-events-none"
+          class="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-[#4E8FCC]/5 rounded-full blur-[150px] pointer-events-none"
         ></div>
       </div>
 
@@ -23,7 +23,7 @@
           :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
         >
           <span
-            class="inline-block py-1.5 px-5 rounded-full bg-[#f928a9]/10 border border-[#f928a9]/30 text-[#f928a9] font-mono font-bold text-xs tracking-widest uppercase mb-6"
+            class="inline-block py-1.5 px-5 rounded-full bg-[#FFD447]/10 border border-[#FFD447]/40 text-[#FFD447] font-mono font-bold text-xs tracking-widest uppercase mb-6"
           >
             Líderes de la Industria
           </span>
@@ -32,12 +32,12 @@
           >
             Nuestros
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-[#f928a9] to-[#00F5D4]"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-[#C96B35] to-[#4E8FCC]"
               >Expertos</span
             >
           </h2>
           <p
-            class="font-inter text-slate-300 max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed"
+            class="font-inter text-[#8A9BB8] max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed"
           >
             Mentes maestras de todo el mundo se reúnen en el desierto para
             proyectar el futuro de la minería, innovación, y exploración
@@ -59,7 +59,7 @@
               y: 0,
               transition: { duration: 400, delay: (index % 5) * 100 },
             }"
-            class="group relative bg-[#121A2F]/80 border border-white/5 hover:border-[#FF6B00]/40 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col h-full backdrop-blur-sm"
+            class="group relative bg-[#121A2F]/80 border border-white/5 hover:border-[#C96B35]/40 rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col h-full backdrop-blur-sm"
           >
             <!-- Image Header -->
             <div
@@ -85,7 +85,7 @@
                   class="inline-flex py-1 px-3 rounded-full text-[9px] font-bold uppercase tracking-widest bg-black/80 backdrop-blur-md border border-white/20 text-white shadow-lg items-center truncate max-w-full"
                 >
                   <span
-                    class="w-1.5 h-1.5 rounded-full mr-2 shrink-0 bg-[#FF6B00] shadow-[0_0_5px_currentColor] text-[#FF6B00]"
+                    class="w-1.5 h-1.5 rounded-full mr-2 shrink-0 bg-[#FFD447] shadow-[0_0_5px_currentColor] text-[#FFD447]"
                   ></span>
                   <span class="truncate">{{ speaker.tag }}</span>
                 </span>
@@ -99,12 +99,12 @@
               <!-- Role & Name -->
               <div class="mb-4">
                 <p
-                  class="text-[#f928a9] font-mono text-[9.5px] font-bold tracking-widest uppercase mb-2 min-h-[32px] flex items-center leading-snug line-clamp-2"
+                  class="text-[#E8A067] font-mono text-[9.5px] font-bold tracking-widest uppercase mb-2 min-h-[32px] flex items-center leading-snug line-clamp-2"
                 >
                   {{ speaker.role }}
                 </p>
                 <h3
-                  class="font-orbitron text-xl md:text-2xl font-bold text-white group-hover:text-[#FF6B00] transition-colors duration-500 leading-tight"
+                  class="font-orbitron text-xl md:text-2xl font-bold text-[#F0EAD6] group-hover:text-[#E8A067] transition-colors duration-500 leading-tight"
                 >
                   {{ speaker.name }}
                 </h3>
@@ -124,7 +124,7 @@
 
               <!-- Bottom gradient bar -->
               <div
-                class="absolute bottom-0 left-0 w-full h-1 bg-[#FF6B00] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                class="absolute bottom-0 left-0 w-full h-1 bg-[#C96B35] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
               ></div>
             </div>
           </div>

@@ -3,7 +3,7 @@
     class="relative py-24 px-6 md:px-12 bg-img border-t border-white/5 overflow-hidden"
   >
     <div
-      class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#EC4899]/5 to-transparent pointer-events-none"
+      class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#C96B35]/5 to-transparent pointer-events-none"
     />
 
     <div class="max-w-7xl mx-auto relative z-10 my-16">
@@ -16,9 +16,9 @@
           :visibleOnce="{ opacity: 1, x: 0, transition: { duration: 500 } }"
         >
           <div class="flex items-center gap-2 mb-2">
-            <AlertCircle :size="16" class="text-[#EC4899]" />
+            <AlertCircle :size="16" class="text-[#C96B35]" />
             <span
-              class="text-[#EC4899] font-mono text-xs uppercase tracking-widest"
+              class="text-[#C96B35] font-mono text-xs uppercase tracking-widest"
               >Información Táctica</span
             >
           </div>
@@ -28,7 +28,7 @@
             PROTOCOLOS <br />
             DEL
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-[#EC4899] to-[#F59E0B]"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-[#C96B35] to-[#E8A067]"
               >ENCUENTRO</span
             >
           </h2>
@@ -72,11 +72,11 @@
             </div>
             <div>
               <h3
-                class="font-orbitron text-lg font-bold text-white mb-2 group-hover:text-[#EC4899] transition-colors"
+                class="font-orbitron text-lg font-bold text-[#F0EAD6] mb-2 group-hover:text-[#C96B35] transition-colors"
               >
                 {{ card.title }}
               </h3>
-              <p class="font-inter text-sm text-[#E6EAF0] leading-relaxed">
+              <p class="font-inter text-sm text-[#F0EAD6]/80 leading-relaxed">
                 {{ card.desc }}
               </p>
             </div>
@@ -105,21 +105,21 @@ const infoCards = [
     title: "CLIMA & VESTIMENTA",
     desc: "Temperatura desértica: 28°C día / 12°C noche. Se recomienda capas ligeras, protección solar UV50+ y calzado cerrado para terreno irregular.",
     color: "text-[#F59E0B]",
-    border: "border-[#F59E0B]",
+    border: "border-[#C96B35]",
   },
   {
     icon: Briefcase,
     title: "KIT DE BIENVENIDA",
     desc: "Recibe tu Smart-Badge NFC y Mochila Táctica en el punto de registro. Acceso digital a presentaciones y networking app.",
-    color: "text-[#EC4899]",
-    border: "border-[#EC4899]",
+    color: "text-[#FFD447]",
+    border: "border-[#FFD447]",
   },
   {
     icon: Bus,
     title: "TRANSPORTE OFICIAL",
     desc: "Shuttles gratuitos desde puntos estratégicos de la ciudad cada 30 minutos. Estacionamiento limitado con reserva previa.",
-    color: "text-[#00F5D4]",
-    border: "border-[#00F5D4]",
+    color: "text-[#4E8FCC]",
+    border: "border-[#4E8FCC]",
   },
   {
     icon: ShieldCheck,

@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =====================================================
+   GED 2026 — Design System
+   Paleta extraída del nuevo logotipo GED 2026
+   ===================================================== */
+:root {
+  /* Colores principales del logo */
+  --ged-navy:    #0D1535; /* Cielo nocturno — fondo oscuro principal */
+  --ged-navy-2:  #121A2F; /* Fondo de tarjetas sobre navy */
+  --ged-desert:  #C96B35; /* Arena del desierto — acento primario / CTA */
+  --ged-sand:    #E8A067; /* Arena clara — hover / secundario */
+  --ged-star:    #FFD447; /* Estrellas doradas — badges / highlights */
+  --ged-planet:  #4E8FCC; /* Planeta azul celeste — acento frío / Iquique */
+  --ged-cream:   #F0EAD6; /* Beis cálido — texto / superficie clara */
+  --ged-light:   #F7F3EC; /* Fondo secciones claras (Agenda, Sponsors) */
+  --ged-muted:   #8A9BB8; /* Texto secundario sobre fondos oscuros */
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -15,8 +32,8 @@
   }
 
   body {
-    background-color: #0B0F1A;
-    color: #E6EAF0;
+    background-color: var(--ged-navy);
+    color: var(--ged-cream);
     overflow-x: hidden;
   }
 }

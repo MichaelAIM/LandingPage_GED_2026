@@ -1,8 +1,8 @@
 <template>
-  <section class="py-32 md:py-40 bg-slate-50 border-t border-black/5 relative">
+  <section class="py-32 md:py-40 bg-[#F7F3EC] border-t border-[#C96B35]/10 relative">
     <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
       <span
-        class="inline-block py-1.5 px-5 rounded-full bg-[#f928a9]/10 border border-[#f928a9]/30 text-[#f928a9] font-mono text-xs uppercase tracking-widest mb-12 font-bold"
+        class="inline-block py-1.5 px-5 rounded-full bg-[#FFD447]/10 border border-[#FFD447]/40 text-[#FFD447] font-mono text-xs uppercase tracking-widest mb-12 font-bold"
       >
         Aliados del Ecosistema
       </span>

@@ -14,9 +14,9 @@
     ></div>
 
     <img
-      src="../assets/LOGO_GED.png"
-      class="mx-auto h-24 w-auto pt-5 sm:ml-0 sm:mr-0 pl-5"
-      alt=""
+      src="../assets/propuestas-logo-n2-03.png"
+      class="mx-auto h-28 w-auto pt-5"
+      alt="Gran Encuentro del Desierto 2026"
     />
     <div
       class="relative mx-auto flex min-h-screen max-w-7xl flex-col px-4 pb-36 sm:px-6 lg:px-12"
@@ -144,7 +144,7 @@
               </li>
               <li class="flex items-start gap-3">
                 <span
-                  class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#f928a9]"
+                  class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#4E8FCC]"
                 ></span>
                 Experiencia alineada con la identidad GED
               </li>

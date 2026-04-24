@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-[#0B0F1A] border-t border-white/10 pt-32 md:pt-48 pb-16 text-[#E6EAF0]"
+    class="bg-[#0D1535] border-t border-[#F0EAD6]/10 pt-32 md:pt-48 pb-16 text-[#F0EAD6]"
   >
     <!-- Frase de Cierre -->
     <div class="max-w-5xl mx-auto px-6 mb-20 text-center">
@@ -9,12 +9,12 @@
       >
         GED 2026 reúne a quienes están construyendo el
         <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-[#00F5D4]"
+          class="text-transparent bg-clip-text bg-gradient-to-r from-[#C96B35] to-[#4E8FCC]"
           >futuro desde el desierto</span
         >.
       </h2>
       <p
-        class="font-inter font-light text-[#E6EAF0]/80 text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
+        class="font-inter font-light text-[#F0EAD6]/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
       >
         Más días, más territorios, más conexiones y una visión más amplia de lo
         que Arica e Iquique pueden aportar al mundo.
@@ -25,7 +25,13 @@
       class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-t border-white/10 pt-16"
     >
       <div class="col-span-1 md:col-span-2">
-        <h2 class="font-orbitron text-2xl font-bold text-white mb-4">
+        <!-- Logo nuevo GED 2026 -->
+        <img
+          src="../assets/propuestas-logo-n2-05.png"
+          alt="Gran Encuentro del Desierto 2026"
+          class="w-20 h-20 mb-4 opacity-90"
+        />
+        <h2 class="font-orbitron text-2xl font-bold text-[#F0EAD6] mb-4">
           EL GRAN ENCUENTRO <br />
           DEL DESIERTO
         </h2>
@@ -40,7 +46,7 @@
             v-for="(social, i) in socials"
             :key="i"
             href="#"
-            class="p-2 bg-white/5 rounded-full hover:bg-[#FF6B00] hover:text-white transition-colors"
+            class="p-2 bg-white/5 rounded-full hover:bg-[#C96B35] hover:text-[#F0EAD6] transition-colors"
           >
             <component :is="social.icon" :size="20" />
           </a>
@@ -48,12 +54,12 @@
       </div>
 
       <div>
-        <h3 class="font-orbitron text-lg font-bold text-white mb-6">
+        <h3 class="font-orbitron text-lg font-bold text-[#F0EAD6] mb-6">
           Enlaces Rápidos
         </h3>
-        <ul class="space-y-4 text-[#E6EAF0]/60">
+        <ul class="space-y-4 text-[#F0EAD6]/60">
           <li v-for="link in quickLinks" :key="link">
-            <a href="#" class="hover:text-[#00F5D4] transition-colors">{{
+            <a href="#" class="hover:text-[#E8A067] transition-colors">{{
               link
             }}</a>
           </li>
@@ -64,9 +70,7 @@
         <h3 class="font-orbitron text-lg font-bold text-white mb-6">
           Contacto
         </h3>
-        <ul
-          class="space-y-4 text-[#E6EAF0]/60 font-inter font-light text-sm hover:[&_a]:text-[#00F5D4]"
-        >
+        <ul class="space-y-4 text-[#F0EAD6]/60 font-inter font-light text-sm hover:[&_a]:text-[#E8A067]">
           <li class="flex items-center gap-2">
             <Mail :size="16" />
             <a href="mailto:contacto@wakilabs.cl" class="transition-colors"
@@ -76,7 +80,7 @@
           <li>Si quieres saber más, visita nuestro sitio web</li>
         </ul>
         <button
-          class="mt-6 px-6 py-3 bg-[#FF6B00] text-white font-orbitron font-bold text-sm rounded hover:bg-[#FFC857] hover:text-black transition-colors"
+          class="mt-6 px-6 py-3 bg-[#C96B35] text-[#F0EAD6] font-orbitron font-bold text-sm rounded hover:bg-[#FFD447] hover:text-[#0D1535] transition-colors"
         >
           <a href="https://wakilabs.cl" target="_blank">Ir al sitio web</a>
         </button>
@@ -88,8 +92,8 @@
     >
       <p>&copy; 2026 WakiLabs. Todos los derechos reservados.</p>
       <div class="flex gap-6 mt-4 md:mt-0">
-        <a href="#" class="hover:text-white transition-colors">Privacidad</a>
-        <a href="#" class="hover:text-white transition-colors">Términos</a>
+        <a href="#" class="hover:text-[#F0EAD6] transition-colors">Privacidad</a>
+        <a href="#" class="hover:text-[#F0EAD6] transition-colors">Términos</a>
       </div>
     </div>
   </footer>

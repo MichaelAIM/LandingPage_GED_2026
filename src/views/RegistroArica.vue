@@ -13,9 +13,9 @@
       }"
     ></div>
     <img
-      src="../assets/LOGO_GED.png"
-      class="mx-auto h-24 w-auto pt-5 pl-5 sm:ml-0 sm:mr-0"
-      alt=""
+      src="../assets/propuestas-logo-n2-03.png"
+      class="mx-auto h-28 w-auto pt-5"
+      alt="Gran Encuentro del Desierto 2026"
     />
     <div
       class="relative mx-auto flex min-h-screen max-w-7xl flex-col px-4 pb-36 sm:px-6 lg:px-12"
@@ -35,7 +35,7 @@
               <span
                 class="inline-flex items-center gap-3 rounded-full border border-[#f928a9]/20 bg-[#0f172a]/80 px-4 py-2 text-sm uppercase tracking-[0.3em] text-[#f928a9]"
               >
-                <span class="h-2 w-2 rounded-full bg-[#f928a9]"></span>
+                <span class="h-2 w-2 rounded-full bg-[#C96B35]"></span>
                 Registro Arica
               </span>
             </div>
@@ -69,7 +69,7 @@
 
               <p class="text-sm leading-6 text-slate-400">
                 <i
-                  class="font-mono text-xs uppercase tracking-widest text-[#f928a9]"
+                  class="font-mono text-xs uppercase tracking-widest text-[#C96B35]"
                   >Nota importante:</i
                 >
                 Si el formulario no aparece de inmediato, actualiza la página.
@@ -141,7 +141,7 @@
               </li>
               <li class="flex items-start gap-3">
                 <span
-                  class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#f928a9]"
+                  class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#C96B35]"
                 ></span>
                 Experiencia alineada con la identidad GED
               </li>

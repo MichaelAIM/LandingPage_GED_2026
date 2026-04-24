@@ -10,8 +10,21 @@
         opacity: 1,
         transition: { delay: 1000, duration: 800, type: 'spring' },
       }"
-      class="flex items-center gap-2 p-2 rounded-full bg-[#0B0F1A]/80 backdrop-blur-xl border border-white/10 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
+      class="flex items-center gap-2 p-2 rounded-full bg-[#0D1535]/85 backdrop-blur-xl border border-[#F0EAD6]/10 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)]"
     >
+      <!-- Logo GED -->
+      <a
+        href="/"
+        class="flex items-center justify-center p-1 rounded-full hover:ring-2 hover:ring-[#C96B35]/50 transition-all duration-300"
+        title="Gran Encuentro del Desierto 2026"
+      >
+        <img
+          src="../assets/propuestas-logo-n2-03.png"
+          alt="GED 2026"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+      </a>
+      <div class="w-px h-6 bg-white/10"></div>
       <a
         v-for="(item, index) in navItems"
         :key="index"
@@ -19,14 +32,14 @@
         class="relative group flex items-center justify-center p-3 rounded-full transition-all duration-300"
         :class="
           item.primary
-            ? 'bg-[#FF6B00] text-white hover:bg-[#FFC857] hover:text-black shadow-[0_0_15px_rgba(255,107,0,0.4)]'
-            : 'text-[#E6EAF0]/60 hover:text-white hover:bg-white/10'
+            ? 'bg-[#C96B35] text-[#F0EAD6] hover:bg-[#FFD447] hover:text-[#0D1535] shadow-[0_0_15px_rgba(201,107,53,0.5)] transition-all duration-300'
+            : 'text-[#F0EAD6]/60 hover:text-[#F0EAD6] hover:bg-white/10'
         "
       >
         <component :is="item.icon" :size="20" />
         <!-- Tooltip -->
         <span
-          class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#0B0F1A] text-white text-[10px] uppercase tracking-wider rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-white/10"
+          class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#0D1535] text-[#F0EAD6] text-[10px] uppercase tracking-wider rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-[#F0EAD6]/15"
         >
           {{ item.label }}
         </span>

@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative py-24 px-6 md:px-12 bg-[#080C14] border-t border-white/5 overflow-hidden"
+    class="relative py-24 px-6 md:px-12 bg-[#0D1535] border-t border-white/5 overflow-hidden"
   >
     <div
       class="max-w-7xl mx-auto my-10 relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-12"
@@ -14,17 +14,17 @@
           class="mb-8"
         >
           <span
-            class="text-[#00F5D4] font-mono text-xs uppercase tracking-widest block mb-2"
+            class="text-[#FFD447] font-mono text-xs uppercase tracking-widest block mb-2"
             >// Mapa Táctico</span
           >
           <h2 class="font-orbitron text-4xl font-bold text-white mb-4">
             ZONAS DEL <br />
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] to-[#EC4899]"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-[#C96B35] to-[#4E8FCC]"
               >ENCUENTRO</span
             >
           </h2>
-          <p class="font-inter text-[#E6EAF0]/60 text-sm leading-relaxed">
+          <p class="font-inter text-[#8A9BB8] text-sm leading-relaxed">
             Navega por las áreas estratégicas diseñadas para maximizar la
             interacción y el aprendizaje.
           </p>
@@ -81,11 +81,11 @@
       >
         <!-- Grid -->
         <div
-          class="absolute inset-0 bg-[linear-gradient(rgba(0,255,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,212,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"
+          class="absolute inset-0 bg-[linear-gradient(rgba(201,107,53,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(201,107,53,0.04)_1px,transparent_1px)] bg-[size:40px_40px]"
         />
         <!-- Radar sweep -->
         <div
-          class="absolute inset-0 bg-gradient-to-b from-transparent via-[#00F5D4]/5 to-transparent animate-scan pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-[#FFD447]/5 to-transparent animate-scan pointer-events-none"
         />
 
         <!-- Active Zone Detail -->
@@ -180,9 +180,9 @@ const zones = [
     name: "EVENT LAYOUT",
     desc: "Recorrido inmersivo por las áreas clave del encuentro, desde el Main Stage hasta el Bio-Café.",
     icon: Maximize,
-    color: "text-[#EC4899]",
-    bg: "bg-[#EC4899]/10",
-    border: "border-[#EC4899]",
+    color: "text-[#C96B35]",
+    bg: "bg-[#C96B35]/10",
+    border: "border-[#C96B35]",
   },
   {
     id: "02",
@@ -198,9 +198,9 @@ const zones = [
     name: "STARTUP STAGE",
     desc: "Espacio dedicado a la innovación y el emprendimiento, con presentaciones de startups y proyectos disruptivos.",
     icon: Lightbulb,
-    color: "text-[#00F5D4]",
-    bg: "bg-[#00F5D4]/10",
-    border: "border-[#00F5D4]",
+    color: "text-[#FFD447]",
+    bg: "bg-[#FFD447]/10",
+    border: "border-[#FFD447]",
   },
   {
     id: "04",

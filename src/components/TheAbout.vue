@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="relative w-full py-32 md:py-48 px-6 md:px-12 bg-[#0B0F1A] overflow-hidden"
+    class="relative w-full py-32 md:py-48 px-6 md:px-12 bg-[#0D1535] overflow-hidden"
   >
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
@@ -11,7 +11,7 @@
         class="w-full h-full object-cover opacity-20"
       />
       <div
-        class="absolute inset-0 bg-gradient-to-r from-[#0B0F1A] via-[#0B0F1A]/90 to-[#0B0F1A]/50"
+        class="absolute inset-0 bg-gradient-to-r from-[#0D1535] via-[#0D1535]/90 to-[#0D1535]/50"
       />
     </div>
 
@@ -27,22 +27,30 @@
           :visibleOnce="{ opacity: 1, x: 0, transition: { duration: 600 } }"
           class="max-w-xl"
         >
-          <span
-            class="inline-block py-1.5 px-5 rounded-full bg-[#f928a9]/10 border border-[#f928a9]/30 text-[#f928a9] font-mono font-bold text-xs uppercase tracking-widest mb-6"
-          >
-            // El Manifiesto del GED
-          </span>
+          <!-- Logo nuevo GED -->
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              src="../assets/propuestas-logo-n2-03.png"
+              alt="GED 2026"
+              class="w-14 h-14 rounded-full drop-shadow-[0_0_12px_rgba(201,107,53,0.4)]"
+            />
+            <span
+              class="inline-block py-1.5 px-5 rounded-full bg-[#FFD447]/10 border border-[#FFD447]/40 text-[#FFD447] font-mono font-bold text-xs uppercase tracking-widest"
+            >
+              // El Manifiesto del GED
+            </span>
+          </div>
           <h2
             class="font-orbitron text-4xl lg:text-5xl font-black text-white leading-tight mb-6 uppercase"
           >
             Del desierto <br />
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-[#f928a9] to-[#00F5D4]"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-[#C96B35] to-[#4E8FCC]"
               >a la oportunidad:</span
             >
           </h2>
           <p
-            class="font-inter text-base md:text-lg font-light text-slate-300 leading-relaxed mb-6"
+            class="font-inter text-base md:text-lg font-light text-[#F0EAD6]/80 leading-relaxed mb-6"
           >
             El Gran Encuentro del Desierto nace desde una convicción profunda:
             el desierto chileno no es un límite, sino una oportunidad. Es un
@@ -52,7 +60,7 @@
             desarrollo.
           </p>
           <p
-            class="font-inter text-base md:text-lg font-light text-slate-300 leading-relaxed"
+            class="font-inter text-base md:text-lg font-light text-[#F0EAD6]/80 leading-relaxed"
           >
             En esta segunda edición, GED amplía su mirada más allá de la
             agricultura del desierto e incorpora nuevas perspectivas que
@@ -73,7 +81,7 @@
         >
           <!-- Decorative ambient glow -->
           <div
-            class="absolute -inset-4 bg-gradient-to-tr from-[#f928a9]/20 to-transparent blur-2xl opacity-50 group-hover:opacity-100 transition duration-700 pointer-events-none z-0"
+            class="absolute -inset-4 bg-gradient-to-tr from-[#C96B35]/20 to-transparent blur-2xl opacity-50 group-hover:opacity-100 transition duration-700 pointer-events-none z-0"
           ></div>
 
           <video
@@ -96,7 +104,7 @@
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative"
       >
         <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#f928a9]/5 rounded-full blur-[100px] pointer-events-none"
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C96B35]/8 rounded-full blur-[100px] pointer-events-none"
         />
 
         <div
@@ -109,30 +117,30 @@
             y: 0,
             transition: { duration: 500, delay: index * 100 },
           }"
-          class="group p-8 rounded-2xl bg-[#121A2F]/60 border border-white/5 backdrop-blur-md hover:border-[#f928a9]/50 transition-all duration-300 hover:bg-[#121A2F]/80 flex flex-col h-full"
+          class="group p-8 rounded-2xl bg-[#121A2F]/60 border border-white/5 backdrop-blur-md hover:border-[#C96B35]/50 transition-all duration-300 hover:bg-[#121A2F]/80 flex flex-col h-full"
         >
           <div class="mb-6 flex items-center justify-between">
             <div
-              class="p-4 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 group-hover:border-[#f928a9]/30 transition-colors shadow-inner"
+              class="p-4 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 group-hover:border-[#C96B35]/30 transition-colors shadow-inner"
             >
               <component
                 :is="pillar.icon"
-                class="text-white group-hover:text-[#f928a9] transition-colors"
+                class="text-[#F0EAD6]/70 group-hover:text-[#C96B35] transition-colors"
                 :size="28"
               />
             </div>
             <span
-              class="font-mono text-xs text-white/20 uppercase font-bold group-hover:text-[#f928a9]/50 transition-colors"
+              class="font-mono text-xs text-white/20 uppercase font-bold group-hover:text-[#FFD447]/50 transition-colors"
               >0{{ index + 1 }}</span
             >
           </div>
           <h3
-            class="font-orbitron text-xl font-bold text-white mb-3 group-hover:text-[#f928a9] transition-colors"
+            class="font-orbitron text-xl font-bold text-[#F0EAD6] mb-3 group-hover:text-[#E8A067] transition-colors"
           >
             {{ pillar.title }}
           </h3>
           <p
-            class="font-inter text-sm text-slate-400 leading-relaxed flex-grow"
+            class="font-inter text-sm text-[#8A9BB8] leading-relaxed flex-grow"
           >
             {{ pillar.desc }}
           </p>

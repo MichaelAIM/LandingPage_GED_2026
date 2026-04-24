@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-slate-50 relative overflow-hidden">
+  <div class="bg-[#F7F3EC] relative overflow-hidden">
     <!-- ==================== AGENDA ARICA ==================== -->
     <section
       id="agenda-arica"
-      class="py-32 md:py-48 relative border-t border-black/5"
+      class="py-32 md:py-48 relative border-t border-[#C96B35]/10"
     >
       <div
-        class="absolute inset-0 bg-gradient-to-br from-[#FF6B00]/5 to-transparent pointer-events-none"
+        class="absolute inset-0 bg-gradient-to-br from-[#C96B35]/8 to-transparent pointer-events-none"
       />
 
       <div class="max-w-5xl mx-auto px-6 relative z-10">
@@ -19,14 +19,14 @@
             class="mb-4"
           >
             <span
-              class="inline-block py-1.5 px-5 rounded-full bg-[#f928a9]/10 border border-[#f928a9]/30 text-[#f928a9] font-mono font-bold text-xs tracking-widest uppercase mb-6"
+              class="inline-block py-1.5 px-5 rounded-full bg-[#C96B35]/12 border border-[#C96B35]/40 text-[#C96B35] font-mono font-bold text-xs tracking-widest uppercase mb-6"
             >
               11 al 13 de junio
             </span>
             <h2
-              class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-slate-900"
+              class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-[#0D1535]"
             >
-              AGENDA <span class="text-[#f928a9]">ARICA</span>
+              AGENDA <span class="text-[#C96B35]">ARICA</span>
             </h2>
           </div>
           <div
@@ -41,7 +41,7 @@
         <!-- Timeline Arica -->
         <div class="relative">
           <div
-            class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#f928a9]/40 to-transparent md:-translate-x-1/2"
+            class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#C96B35]/50 to-transparent md:-translate-x-1/2"
           />
 
           <div class="space-y-8">
@@ -61,7 +61,7 @@
               <!-- Content Card -->
               <div class="flex-1 w-full pl-16 md:pl-0">
                 <div
-                  class="group relative p-6 xl:p-8 bg-white rounded-2xl border border-black/5 hover:border-[#f928a9]/40 transition-all duration-300 hover:shadow-[0_15px_30px_rgba(0,0,0,0.05)] hover:-translate-y-1"
+                  class="group relative p-6 xl:p-8 bg-white rounded-2xl border border-[#C96B35]/10 hover:border-[#C96B35]/40 transition-all duration-300 hover:shadow-[0_15px_30px_rgba(201,107,53,0.08)] hover:-translate-y-1"
                   :class="index % 2 === 0 ? 'md:text-left' : 'md:text-right'"
                 >
                   <div
@@ -81,7 +81,7 @@
                     </span>
                   </div>
                   <h3
-                    class="font-orbitron text-xl font-bold text-slate-900 mb-3 group-hover:text-[#f928a9] transition-colors leading-tight"
+                    class="font-orbitron text-xl font-bold text-[#0D1535] mb-3 group-hover:text-[#C96B35] transition-colors leading-tight"
                   >
                     {{ item.title }}
                   </h3>
@@ -94,7 +94,7 @@
                     v-if="item.button.label"
                     :to="item.button.href"
                     rel="noreferrer"
-                    class="mt-4 inline-block px-4 py-2 bg-[#f928a9] text-white font-bold rounded hover:bg-[#f928a9]/80 transition-colors"
+                    class="mt-4 inline-block px-4 py-2 bg-[#C96B35] text-white font-bold rounded hover:bg-[#E8A067] hover:text-[#0D1535] transition-colors"
                   >
                     {{ item.button.label }}
                   </router-link>
@@ -103,9 +103,9 @@
 
               <!-- Center Dot -->
               <div
-                class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-4 h-4 rounded-full bg-white border-2 border-[#f928a9]/30 z-10 shadow-[0_0_10px_rgba(255,107,0,0.2)]"
+                class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-4 h-4 rounded-full bg-white border-2 border-[#C96B35]/40 z-10 shadow-[0_0_10px_rgba(201,107,53,0.3)]"
               >
-                <div class="w-1.5 h-1.5 rounded-full bg-[#f928a9]" />
+                <div class="w-1.5 h-1.5 rounded-full bg-[#C96B35]" />
               </div>
 
               <!-- Time -->
@@ -115,12 +115,12 @@
                   index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'
                 "
               >
-                <span class="font-mono text-2xl font-bold text-[#f928a9]/80">{{
+                <span class="font-mono text-2xl font-bold text-[#C96B35]">{{
                   item.time
                 }}</span>
               </div>
               <div class="absolute left-14 -top-1 md:hidden">
-                <span class="font-mono text-sm font-bold text-[#f928a9]/80">{{
+                <span class="font-mono text-sm font-bold text-[#C96B35]">{{
                   item.time
                 }}</span>
               </div>
@@ -138,7 +138,7 @@
       class="py-32 md:py-48 relative border-t border-black/5"
     >
       <div
-        class="absolute inset-0 bg-gradient-to-tl from-[#00F5D4]/5 to-transparent pointer-events-none"
+        class="absolute inset-0 bg-gradient-to-tl from-[#4E8FCC]/8 to-transparent pointer-events-none"
       />
 
       <div class="max-w-5xl mx-auto px-6 relative z-10">
@@ -156,9 +156,9 @@
               16 al 17 de junio
             </span>
             <h2
-              class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-slate-900"
+              class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-[#0D1535]"
             >
-              AGENDA <span class="text-[#38BDF8]">IQUIQUE</span>
+              AGENDA <span class="text-[#4E8FCC]">IQUIQUE</span>
             </h2>
           </div>
           <div
@@ -173,7 +173,7 @@
         <!-- Timeline Iquique -->
         <div class="relative">
           <div
-            class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#38BDF8]/40 to-transparent md:-translate-x-1/2"
+            class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#4E8FCC]/50 to-transparent md:-translate-x-1/2"
           />
 
           <div class="space-y-8">
@@ -193,7 +193,7 @@
               <!-- Content Card -->
               <div class="flex-1 w-full pl-16 md:pl-0">
                 <div
-                  class="group relative p-6 xl:p-8 bg-white rounded-2xl border border-black/5 hover:border-[#38BDF8]/40 transition-all duration-300 hover:shadow-[0_15px_30px_rgba(0,0,0,0.05)] hover:-translate-y-1"
+                  class="group relative p-6 xl:p-8 bg-white rounded-2xl border border-[#4E8FCC]/10 hover:border-[#4E8FCC]/40 transition-all duration-300 hover:shadow-[0_15px_30px_rgba(78,143,204,0.08)] hover:-translate-y-1"
                   :class="index % 2 === 0 ? 'md:text-left' : 'md:text-right'"
                 >
                   <div
@@ -213,7 +213,7 @@
                     </span>
                   </div>
                   <h3
-                    class="font-orbitron text-xl font-bold text-slate-900 mb-3 group-hover:text-[#38BDF8] transition-colors leading-tight"
+                    class="font-orbitron text-xl font-bold text-[#0D1535] mb-3 group-hover:text-[#4E8FCC] transition-colors leading-tight"
                   >
                     {{ item.title }}
                   </h3>
@@ -225,7 +225,7 @@
                   <router-link
                     v-if="item.button.label"
                     :to="item.button.href"
-                    class="mt-4 inline-block px-4 py-2 bg-[#38BDF8] text-white font-bold pointer-events-auto rounded hover:bg-[#38BDF8]/80 transition-colors"
+                    class="mt-4 inline-block px-4 py-2 bg-[#4E8FCC] text-white font-bold pointer-events-auto rounded hover:bg-[#4E8FCC]/80 transition-colors"
                   >
                     {{ item.button.label }}
                   </router-link>
@@ -234,7 +234,7 @@
 
               <!-- Center Dot -->
               <div
-                class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-4 h-4 rounded-full bg-white border-2 border-[#00F5D4]/40 z-10 shadow-[0_0_10px_rgba(255,107,0,0.2)]"
+                class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-4 h-4 rounded-full bg-white border-2 border-[#4E8FCC]/40 z-10 shadow-[0_0_10px_rgba(78,143,204,0.3)]"
               >
                 <div class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]" />
               </div>

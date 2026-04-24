@@ -10,7 +10,7 @@
       <h2 class="font-orbitron text-2xl lg:text-5xl font-black text-white mb-8">
         DOS CIUDADES,
         <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-[#f928a9] to-[#00F5D4]"
+          class="text-transparent bg-clip-text bg-gradient-to-r from-[#C96B35] to-[#4E8FCC]"
           >UN ECOSISTEMA</span
         >
       </h2>
@@ -395,7 +395,7 @@ onUnmounted(() => {
 
 import Waki from "../assets/waki-logo-01-1024x280.png";
 import CORFO from "../assets/CORFO.png";
-import GED from "../assets/LOGO_GED.png";
+import GED from "../assets/propuestas-logo-n2-03.png";
 import codesser from "../assets/logo-codesser.png";
 import consorcio from "../assets/LOGOCONSORCIO-VERDE.png";
 
