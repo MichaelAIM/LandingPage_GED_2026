@@ -55,7 +55,7 @@
           <div class="inline-flex items-center gap-2 self-start border border-[#C96B35]/30 bg-[#C96B35]/8 px-4 py-2">
             <span class="w-1.5 h-1.5 rounded-full bg-[#C96B35] animate-pulse"></span>
             <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-[#E8A067]">Nuevo Evento — GED ×
-              NASA</span>
+              <img src="../assets/nasa-blanco.png" alt="waki-logo-01-1024x280.png" class="h-8 w-auto" /></span>
           </div>
 
           <!-- Headline -->
