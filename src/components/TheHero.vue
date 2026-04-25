@@ -30,24 +30,23 @@
     <div class="relative z-20 flex h-full flex-col items-center justify-center px-6 text-center">
       <div v-motion :initial="{ opacity: 0, y: 30 }"
         :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 200 } }" class="mb-8 max-w-4xl">
-        <span
-          class="inline-block py-1.5 px-5 rounded-full bg-[#FFD447]/10 border border-[#FFD447]/40 text-[#FFD447] font-mono font-bold text-xs uppercase tracking-widest mb-6">
-          EL EPICENTRO DE LA INNOVACIÓN EXTREMA
-        </span>
 
-        <img src="../assets/propuestas-logo-n2-05.png" alt="Gran Encuentro del Desierto 2026"
-          class="w-52 h-52 md:w-64 md:h-64 mx-auto drop-shadow-[0_0_40px_rgba(201,107,53,0.35)] mb-6 rounded-full"
-          @error="
-            (e) => ((e.target as HTMLImageElement).style.display = 'none')
-          " />
+        <img src="../assets/propuestas-logo-n2-09.png" alt="Gran Encuentro del Desierto 2026" class="
+          w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 
+         mx-auto 
+         drop-shadow-[0_10px_40px_rgba(201,107,53,0.6)] 
+         drop-shadow-[0_0_80px_rgba(201,107,53,0.3)]
+         mb-8 
+         rounded-full" @error="
+          (e) => ((e.target as HTMLImageElement).style.display = 'none')
+        " />
 
         <h1
-          class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight leading-tight mb-6">
+          class="font-orbitron text-2xl md:text-4xl lg:text-4xl font-black text-white uppercase tracking-tight leading-tight mb-6">
           innovación, negocios y futuro
         </h1>
 
-        <p
-          class="font-inter text-lg md:text-xl xl:text-2xl text-[#E8A067] font-medium max-w-1xl mx-auto leading-relaxed mb-4">
+        <p class="font-inter text-lg md:text-xl text-[#E8A067] font-medium max-w-1xl mx-auto leading-relaxed mb-4">
           Descubre cómo el desierto está impulsando el futuro tecnológico, desde
           el extremo norte de Chile.
         </p>
@@ -62,7 +61,7 @@
       <!-- CTA Buttons -->
       <div v-motion :initial="{ opacity: 0, y: 20 }"
         :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 400 } }"
-        class="flex flex-col md:flex-row gap-6 mt-8">
+        class="flex flex-col md:flex-row gap-4 mt-8 items-center">
         <a href="#territory-section" @click.prevent="scrollToTerritory('arica')"
           class="group relative px-8 py-4 bg-[#C96B35] text-[#F0EAD6] font-orbitron font-bold tracking-wider uppercase overflow-hidden rounded-sm hover:bg-[#E8A067] hover:text-[#0D1535] transition-all duration-300 shadow-[0_0_20px_rgba(201,107,53,0.4)] hover:shadow-[0_0_30px_rgba(232,160,103,0.5)]">
           <span class="relative z-10 transition-colors duration-300">Arica 11 - 13 de Junio</span>
@@ -74,28 +73,25 @@
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
-    <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { delay: 800, duration: 1000 } }"
-      class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-[#F0EAD6]/50">
-      <span class="text-[10px] uppercase tracking-[0.2em] font-orbitron">Explora el Ecosistema</span>
-      <ArrowDown :size="20" class="animate-bounce text-[#FFD447]/60" />
-    </div>
-
     <!-- Bottom decorative line -->
     <div
       class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#C96B35]/60 to-transparent z-30" />
+
+    <!-- Programa Modal -->
+    <TheProgramaModal v-model="showPrograma" sede="arica" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import TheProgramaModal from "./TheProgramaModal.vue";
 import { Moon, Sun, ArrowDown } from "lucide-vue-next";
 
 // --- Imágenes por modo ---
-import tutelares from "../assets/tutelares.jpg";
 import central from "../assets/central.webp";
+import tutelares from "../assets/tutelares.jpg";
 import desierto from "../assets/Desierto.jpg";
-const nightImages = [tutelares, central];
+const nightImages = [central, tutelares];
 
 const dayImages = [
   desierto,
@@ -103,6 +99,7 @@ const dayImages = [
 ];
 
 const isNight = ref(true);
+const showPrograma = ref(false);
 const nightIndex = ref(0);
 const dayIndex = ref(0);
 
@@ -168,7 +165,7 @@ const handleManualToggle = () => {
 };
 
 onMounted(() => {
-  startModeToggle();
+  //startModeToggle();
   startSlideshow();
 });
 

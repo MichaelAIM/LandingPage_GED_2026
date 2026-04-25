@@ -90,14 +90,21 @@
                   >
                     {{ item.desc }}
                   </p>
-                  <router-link
-                    v-if="item.button.label"
-                    :to="item.button.href"
-                    rel="noreferrer"
-                    class="mt-4 inline-block px-4 py-2 bg-[#C96B35] text-white font-bold rounded hover:bg-[#E8A067] hover:text-[#0D1535] transition-colors"
-                  >
-                    {{ item.button.label }}
-                  </router-link>
+                  <div v-if="item.button.label" class="mt-4 flex items-center gap-3"
+                    :class="index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'">
+                    <button @click="sedePrograma = 'arica'; showPrograma = true"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 border border-[#C96B35]/30 text-[#C96B35] font-mono text-[10px] uppercase tracking-widest hover:bg-[#C96B35]/10 transition-colors duration-200 rounded cursor-pointer bg-transparent">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                      Ver Programa
+                    </button>
+                    <router-link
+                      :to="item.button.href"
+                      rel="noreferrer"
+                      class="inline-block px-4 py-2 bg-[#C96B35] text-white font-bold rounded hover:bg-[#E8A067] hover:text-[#0D1535] transition-colors"
+                    >
+                      {{ item.button.label }}
+                    </router-link>
+                  </div>
                 </div>
               </div>
 
@@ -222,13 +229,20 @@
                   >
                     {{ item.desc }}
                   </p>
-                  <router-link
-                    v-if="item.button.label"
-                    :to="item.button.href"
-                    class="mt-4 inline-block px-4 py-2 bg-[#4E8FCC] text-white font-bold pointer-events-auto rounded hover:bg-[#4E8FCC]/80 transition-colors"
-                  >
-                    {{ item.button.label }}
-                  </router-link>
+                  <div v-if="item.button.label" class="mt-4 flex items-center gap-3"
+                    :class="index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'">
+                    <button @click="sedePrograma = 'iquique'; showPrograma = true"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 border border-[#4E8FCC]/30 text-[#4E8FCC] font-mono text-[10px] uppercase tracking-widest hover:bg-[#4E8FCC]/10 transition-colors duration-200 rounded cursor-pointer bg-transparent">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                      Ver Programa
+                    </button>
+                    <router-link
+                      :to="item.button.href"
+                      class="inline-block px-4 py-2 bg-[#4E8FCC] text-white font-bold pointer-events-auto rounded hover:bg-[#4E8FCC]/80 transition-colors"
+                    >
+                      {{ item.button.label }}
+                    </router-link>
+                  </div>
                 </div>
               </div>
 
@@ -261,11 +275,19 @@
       </div>
     </section>
   </div>
+
+  <!-- Programa Modal -->
+  <TheProgramaModal v-model="showPrograma" :sede="sedePrograma" />
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { Calendar, MapPin } from "lucide-vue-next";
 import TheSpeakers from "./TheSpeakers.vue";
+import TheProgramaModal from "./TheProgramaModal.vue";
+
+const showPrograma = ref(false);
+const sedePrograma = ref<'arica' | 'iquique'>('arica');
 
 const categories: Record<string, { color: string; label: string }> = {
   agro: { color: "#22C55E", label: "AGRO-LIFE" },

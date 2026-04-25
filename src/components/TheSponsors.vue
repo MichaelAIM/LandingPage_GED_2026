@@ -2,23 +2,13 @@
   <section class="py-32 md:py-40 bg-[#F7F3EC] border-t border-[#C96B35]/10 relative">
     <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
       <span
-        class="inline-block py-1.5 px-5 rounded-full bg-[#FFD447]/10 border border-[#FFD447]/40 text-[#FFD447] font-mono text-xs uppercase tracking-widest mb-12 font-bold"
-      >
+        class="inline-block py-1.5 px-5 rounded-full bg-[#0B0F1A]/10 border border-[#0B0F1A]/40 text-[#0B0F1A] font-mono text-xs uppercase tracking-widest mb-12 font-bold">
         Aliados del Ecosistema
       </span>
-      <div
-        class="flex flex-wrap justify-center items-center gap-12 md-gap-24 transition-opacity duration-500"
-      >
-        <div
-          v-for="(sponsor, index) in sponsors"
-          :key="index"
-          class="group cursor-pointer transition-all duration-500 hover:scale-110"
-        >
-          <img
-            :src="sponsor.img"
-            :alt="sponsor.name"
-            class="w-36 h-36 object-contain"
-          />
+      <div class="flex flex-wrap justify-center items-center gap-12 md-gap-24 transition-opacity duration-500">
+        <div v-for="(sponsor, index) in sponsors" :key="index"
+          class="group cursor-pointer transition-all duration-500 hover:scale-110">
+          <img :src="sponsor.img" :alt="sponsor.name" class="w-36 h-36 object-contain" />
         </div>
       </div>
     </div>
@@ -29,7 +19,7 @@
 import Waki from "../assets/waki.png";
 import CORFO from "../assets/CORFO.png";
 import GORE from "../assets/GORE.png";
-import codesser from "../assets/codesser.jpg";
+import codesser from "../assets/codesser.png";
 import NASA from "../assets/NASA.png";
 import IP from "../assets/logo-IP-Santo-tomas.webp";
 import UNAP from "../assets/UNAP.png";

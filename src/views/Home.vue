@@ -15,6 +15,7 @@
 import TheHero from "../components/TheHero.vue";
 import TheAbout from "../components/TheAbout.vue";
 import TheTerritory from "../components/TheTerritory.vue";
+import TheSpeakers from "../components/TheSpeakers.vue";
 import TheAgenda from "../components/TheAgenda.vue";
 import TheNasaWorkshop from "../components/TheNasaWorkshop.vue";
 import TheSponsors from "../components/TheSponsors.vue";
